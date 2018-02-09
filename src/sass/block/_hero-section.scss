@@ -1,0 +1,35 @@
+//banner 1
+.hero-banner{
+  position: relative;
+  min-height: 788px;
+  background-color: #002d4e;
+  padding-top: 313px;
+  padding-bottom: 356px;
+  padding-left: 239px;
+
+  &:after{
+    position: absolute;
+    content: '';
+    display: block;
+    width: 297px;
+    height: 205px;
+    background: url('../images/pin.png') no-repeat left;
+    bottom: 0;
+    left: 0;
+  }
+
+  &:before{
+    position: absolute;
+    content: '';
+    display: block;
+    width: 1536px;
+    height: 788px;
+    background: url('../images/banner-man.png') no-repeat right;
+    bottom: 0;
+    right: 0;
+  }
+
+  &__title{
+    font-size: 64px;
+  }
+}

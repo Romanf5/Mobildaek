@@ -1,40 +1,64 @@
 //  Подключения шрифтов
 
-// font-family: 'Roboto';
+// font-family: 'Saltbush Rough';
 @font-face {
-  font-family: 'Roboto';
+  font-family: 'SaltbushRough';
   font-weight: normal;
-  src:  local('Roboto'), local('Roboto-Regular');
-  src:  url('../fonts/Roboto-Regular.eot');
-  src:  url('../fonts/Roboto-Regular.eot?#iefix') format('embedded-opentype'),
-        url('../fonts/Roboto-Regular.woff2') format('woff2'),
-        url('../fonts/Roboto-Regular.woff') format('woff'),
-        url('../fonts/Roboto-Regular.ttf') format('truetype'),
-        url('../fonts/Roboto-Regular.svg#Roboto-Regular') format('svg');
+  src:  local('SaltbushRough'), local('SaltbushRough');
+  src:  url('../fonts/SB/35C185_2_0.eot');
+  src:  url('../fonts/SB/35C185_2_0.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/SB/35C185_2_0.woff2') format('woff2'),
+        url('../fonts/SB/35C185_2_0.woff') format('woff'),
+        url('../fonts/SB/35C185_2_0.ttf') format('truetype');
 }
 
-// font-family: 'Roboto';
+
+// font-family: 'Saltbush Rough';
 // font-weight: 700;
 @font-face {
-  font-family: 'Roboto';
+  font-family: 'SaltbushRough';
   font-weight: 700;
-  src:  local('Roboto'), local('Roboto-Bold');
-  src:  url('../fonts/Roboto-Bold.eot');
-  src:  url('../fonts/Roboto-Bold.eot?#iefix') format('embedded-opentype'),
-        url('../fonts/Roboto-Bold.woff2') format('woff2'),
-        url('../fonts/Roboto-Bold.woff') format('woff'),
-        url('../fonts/Roboto-Bold.ttf') format('truetype'),
-        url('../fonts/Roboto-Bold.svg#Roboto-Bold') format('svg');
+  src:  local('SaltbushRough'), local('SaltbushRough');
+  src:  url('../fonts/SB/35C185_1_0.eot');
+  src:  url('../fonts/SB/35C185_1_0.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/SB/35C185_1_0.woff2') format('woff2'),
+  url('../fonts/SB/35C185_1_0.woff') format('woff'),
+  url('../fonts/SB/35C185_1_0.ttf') format('truetype');
 }
+
+// font-family: 'Heebo';
+// font-weight: 500;
+@font-face {
+  font-family: 'SaltbushRough';
+  font-weight: 500;
+  src:  local('Heebo'), local('Heebo');
+  src:  url('../fonts/Heebo-Medium.eot');
+  src:  url('../fonts/Heebo-Medium.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/Heebo-Medium.woff') format('woff'),
+  url('../fonts/Heebo-Medium.ttf') format('truetype');
+}
+
+// font-family: 'MyriadHebrew';
+// font-weight: 400;
+@font-face {
+  font-family: 'MyriadHebrew';
+  font-weight: normal;
+  src:  local('MyriadHebrew'), local('MyriadHebrew');
+  src:  url('../fonts/MyriadHebrew-Regular.eot');
+  src:  url('../fonts/MyriadHebrew-Regular.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/MyriadHebrew-Regular.woff') format('woff'),
+  url('../fonts/MyriadHebrew-Regular.ttf') format('truetype');
+}
+
 
 // Заголовки
 
 h1, h2, h3, h4, h5 {
-  font-family: $font-family;
+  font-family: $title-font;
 }
 
 h1 {
-  font-size: 42px;
+  font-size: 46px;
 }
 
 h2 {

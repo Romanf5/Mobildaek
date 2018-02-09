@@ -1,26 +1,27 @@
 //  Цвет
 
 $body-bg: #fff;
-$text-color: #333;
+$text-color-main: #fff;
 
 // Цвет ссылки
 
-$link-color: #55b3f3;
-$link-color--hover: darken($link-color, 20%);
+$link-color: #fff;
+$link-color--hover: #fff;
 
 //  Типографика
 
-$font-family: 'Roboto', Helvetica, Arial, sans-serif;
-// $font-family--helvetica: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$main-font: 'MyriadHebrew', Helvetica, Arial, sans-serif;
+$title-font: 'SaltbushRough', Helvetica, Arial, sans-serif;
+$menu-font: 'Heebo', sans-serif;
 
-$font-size: 14px;
+$font-size: 25px;
 $font-weight: 400; // Regular
-$line-height: 1.2;
+$line-height: 1;
 
 // Ширина контейнера
 
-$container-padding: 15px;
-$container-width: 1170px + $container-padding * 2;
+/*$container-padding: 15px;
+$container-width: 1170px + $container-padding * 2;*/
 
 //  Адаптивность и соответствующие ширины контейнера
 
