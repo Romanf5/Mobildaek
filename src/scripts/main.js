@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(document).ready(function () {
   //UI Vars
   var tabContent = $('.tab-content');
   var tabControls = $('.tab-control');
@@ -26,18 +26,18 @@ $(document).ready(function() {
     var targetItem = $(event.target);
     var targetItemDataTab = $(event.target).attr('data-tab-control');
 
-    tabContent.fadeOut(300);
-    targetItem.addClass('active-tab');
-    tabControls.not(this).removeClass('active-tab');
+    if (!$(this).hasClass('active-tab')) {
+      tabContent.fadeOut(300);
+      targetItem.addClass('active-tab');
+      tabControls.not(this).removeClass('active-tab');
 
-    tabContent.each(function (index, element) {
-      var elementItem = $(element);
-      if(targetItemDataTab === elementItem.attr('data-tab-index')){
-        elementItem.delay(300).fadeIn(300);
-      }
-    });
-    event.preventDefault();
+      tabContent.each(function (index, element) {
+        var elementItem = $(element);
+        if (targetItemDataTab === elementItem.attr('data-tab-index')) {
+          elementItem.delay(300).fadeIn(300);
+        }
+      });
+      event.preventDefault();
+    }
   };
-
-
 });

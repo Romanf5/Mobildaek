@@ -114,6 +114,40 @@
   }
 }
 
+.car-section{
+  text-align: center;
+  padding-top: 100px;
+  padding-bottom: 80px;
+  background: url('../images/bg-car.png') no-repeat center/cover;
+
+  .title-section{
+    font-size: 89px;
+    color: $decoration-text-color;
+    line-height: 78.52px;
+    font-weight: 400;
+    text-transform: none;
+    margin-bottom: 45px;
+  }
+
+  .description-section{
+    text-transform: uppercase;
+    color: $dark-color;
+    font-size: 68px;
+    font-family: $title-font;
+    font-weight: 700;
+    margin-bottom: 117px;
+  }
+}
+
+.wrapper-car{
+  max-width: 688px;
+  margin: 0 auto 25px;
+
+  img{
+    width: 100%;
+  }
+}
+
 .weather-icon {
   .icon {
     vertical-align: middle;

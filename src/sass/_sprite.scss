@@ -18,7 +18,7 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 */
 .icon-arrow-right {
   background-image: url(../images/spritesheet.png);
-  background-position: -259px -110px;
+  background-position: -120px -150px;
   width: 9px;
   height: 15px;
 }
@@ -40,6 +40,18 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
   width: 20px;
   height: 20px;
 }
+.icon-fb {
+  background-image: url(../images/spritesheet.png);
+  background-position: -95px -169px;
+  width: 12px;
+  height: 19px;
+}
+.icon-in {
+  background-image: url(../images/spritesheet.png);
+  background-position: -259px -110px;
+  width: 18px;
+  height: 18px;
+}
 .icon-play {
   background-image: url(../images/spritesheet.png);
   background-position: 0px -150px;
@@ -57,4 +69,10 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
   background-position: 0px 0px;
   width: 167px;
   height: 148px;
+}
+.icon-yt {
+  background-image: url(../images/spritesheet.png);
+  background-position: -95px -150px;
+  width: 23px;
+  height: 17px;
 }

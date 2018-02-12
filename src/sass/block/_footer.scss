@@ -1,3 +1,70 @@
 .page-footer {
-	position: relative;
+  position: relative;
+  padding-top: 78px;
+  padding-bottom: 70px;
+}
+
+.footer-content {
+  max-width: 922px;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.footer-logo {
+  max-width: 310px;
+  margin: 0 auto 21px;
+}
+
+.contact-info{
+  @include clearlist;
+  margin-bottom: 52px;
+
+  >li{
+    display: inline-block;
+    color: $dark-color;
+    font-family: $menu-font;
+    font-size: 16px;
+    font-weight: 500;
+    padding-left: 10px;
+    padding-right: 10px;
+
+    &:first-of-type{
+      padding-left: 0;
+      >span{
+        padding-left: 10px;
+        padding-right: 10px;
+        &:first-of-type{
+          padding-left: 0;
+        }
+        &:last-of-type{
+          padding-right: 0;
+        }
+      }
+    }
+
+    &:last-of-type{
+      padding-right: 0;
+    }
+
+    >a{
+      color: $dark-color;
+    }
+  }
+}
+
+.social-link{
+  text-align: center;
+  >a{
+    padding-left: 10px;
+    padding-right: 10px;
+
+    &:last-of-type{
+      padding-right: 0;
+    }
+
+    &:first-of-type{
+      padding-left: 0;
+    }
+  }
 }
