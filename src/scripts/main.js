@@ -2,14 +2,15 @@ $(document).ready(function () {
   //UI Vars
   var tabContent = $('.tab-content');
   var tabControls = $('.tab-control');
-  var playBtn = $('#lightbox')
-
+  var playBtn = $('#lightbox');
+  var itemMenu = $('.main-nav>li>a');
 
   initial();
 
   //Initial function
   function initial() {
     tabControls.on('click', tabHandler);
+    activeMenuHandler(itemMenu);
 
     //LightBox Video
     playBtn.poptrox({
@@ -40,4 +41,16 @@ $(document).ready(function () {
       event.preventDefault();
     }
   };
+
+  //Active item menu
+  function activeMenuHandler(items) {
+    items.each(function (index, item) {
+      var itemElement = $(item);
+      console.log(itemElement.attr('href'));
+      console.log(itemElement.prop('href'))
+      if(itemElement.prop('href') === window.location.href){
+        itemElement.addClass('current-page');
+      }
+    })
+  }
 });

@@ -14,7 +14,8 @@
       letter-spacing: 0.45px;
       transition: 0.5s;
 
-      &:hover{
+      &:hover,
+      &.current-page{
         color: $decoration-text-color;
       }
     }
