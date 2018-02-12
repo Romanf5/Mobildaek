@@ -40,6 +40,12 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
   width: 20px;
   height: 20px;
 }
+.icon-play {
+  background-image: url(../images/spritesheet.png);
+  background-position: 0px -150px;
+  width: 93px;
+  height: 127px;
+}
 .icon-snow {
   background-image: url(../images/spritesheet.png);
   background-position: -169px 0px;

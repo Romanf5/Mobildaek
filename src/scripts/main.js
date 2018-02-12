@@ -2,6 +2,7 @@ $(document).ready(function() {
   //UI Vars
   var tabContent = $('.tab-content');
   var tabControls = $('.tab-control');
+  var playBtn = $('#lightbox')
 
 
   initial();
@@ -9,6 +10,14 @@ $(document).ready(function() {
   //Initial function
   function initial() {
     tabControls.on('click', tabHandler);
+
+    //LightBox Video
+    playBtn.poptrox({
+      overlayColor: '#002d4e',
+      overlayOpacity: 0.77,
+      popupWidth: 800,
+      popupHeight: 400
+    });
   }
 
   //Tab logik
@@ -28,6 +37,7 @@ $(document).ready(function() {
       }
     });
     event.preventDefault();
-  }
+  };
+
 
 });
