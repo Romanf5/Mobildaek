@@ -1,45 +1,106 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>Page Title</title>
-  <meta name="description" content="">
-  @@include('_include/head.html')
-</head>
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Page Title</title>
+    <meta name="description" content="">
+    @@include('_include/head.html')
+  </head>
 
-<body>
-<div class="global-wrapper">
-  @@include('_include/header.html')
+  <body>
+  <div class="global-wrapper">
+    @@include('_include/header.html')
 
-  @@include('_include/banner-1.html')
+    @@include('_include/banner-1.html')
 
-  <div class="tab-wrp">
-    <ul class="tabs-control">
-      <li class="tabs-control__item"><a class="tab-control" href="#" data-tab-control="1">Book dækskifte</a></li>
-      <li class="tabs-control__item"><a href="#" data-tab-control="2" class="tab-control active-tab">Køb dæk</a></li>
-    </ul>
-    <div class="tabs-content-box">
-      <div class="tab-content" data-tab-index="1">
-        <div class="tab-content-tab-title">
-          Vil Du Spare Tid OG bovl?
+    <div class="tab-wrp">
+      <ul class="tabs-control">
+        <li class="tabs-control__item"><a class="tab-control" href="#" data-tab-control="1">Book dækskifte</a></li>
+        <li class="tabs-control__item"><a href="#" data-tab-control="2" class="tab-control active-tab">Køb dæk</a></li>
+      </ul>
+      <div class="tabs-content-box">
+        <div class="tab-content" data-tab-index="1">
+          <div class="tab-content-tab-title">
+            Vil Du Spare Tid OG bovl?
+          </div>
+          <div class="btn-wrp">
+            <a href="#" class="btn">Book her<i class="icon icon-arrow-right"></i></a>
+          </div>
         </div>
-        <div class="btn-wrp">
-          <a href="#" class="btn">Book her<i class="icon icon-arrow-right"></i></a>
-        </div>
-      </div>
-      <div class="tab-content active-content" data-tab-index="2">
-        <div class="tab-content-tab-title">
-          Find dine nye dæk her
-        </div>
-        <div class="btn-wrp">
-          <a href="#" class="btn">Køb her <i class="icon icon-arrow-right"></i></a>
+        <div class="tab-content active-content" data-tab-index="2">
+          <div class="tab-content-tab-title">
+            Find dine nye dæk her
+          </div>
+          <div class="btn-wrp">
+            <a href="#" class="btn">Køb her <i class="icon icon-arrow-right"></i></a>
+          </div>
         </div>
       </div>
     </div>
-  </div>
 
-  @@include('_include/footer.html')
-  @@include('_include/inc_script.html')
-</div>
-</body>
-</html>
+    <section class="preview-section">
+      <div class="title-wrp">
+        <h1 class="title-section">Vi skifter dine dæk og hjul på din arbejdsplads,
+          imens du arbejder. <span class="decoration">Du slipper for alt bøvl.</span></h1>
+      </div>
+    </section>
+
+    <section class="service-section">
+      <div class="service">
+        <div class="service__row">
+          <div class="service__item">
+            <div class="blue-item">
+              <div class="title-item">Sæsonskifte</div>
+              <div class="description-item">
+                Vi kommer ud til dig og skifter dine hjule på stedet. Samtidig tilbyder vi at opbevare de hjul vi har
+                skiftet og tage dem med til næste sæson.
+              </div>
+              <div class="weather-icon">
+                <i class="icon icon-snow"></i>
+                <i class="icon icon-sun"></i>
+              </div>
+              <div class="price-block">
+                <div class="img-price-wrp">
+                  <img src="images/blue-c.png" alt="img">
+                  <div class="price-mark">
+                    <span>fra</span> <br/>
+                    595,-
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="btn-wrp btn-wrp--indent-md">
+              <a href="#" class="btn btn--md">Book her <i class="icon icon-arrow-right"></i></a>
+            </div>
+          </div>
+          <div class="service__item">
+            <div class="pink-item">
+              <div class="title-item">Nye dæk</div>
+              <div class="description-item">
+                Ikke mere slidbane tilbage på dine dæk? I vores dækshop kan du købe dæk til konkurrencedygtige priser. Det
+                bliver kun nemt og bekvemt for dig da prisen er incl. montering ude hos dig.
+              </div>
+              <div class="price-block">
+                <div class="img-price-wrp">
+                  <img src="images/pink-c.png" alt="img">
+
+                  <div class="price-mark">
+                    <span>fra</span> <br/>
+                    1.295,-
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="btn-wrp btn-wrp--indent-md">
+              <a href="#" class="btn btn--md">Køb dæk <i class="icon icon-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    @@include('_include/footer.html')
+    @@include('_include/inc_script.html')
+  </div>
+  </body>
+  </html>

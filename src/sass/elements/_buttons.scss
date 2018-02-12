@@ -2,6 +2,10 @@
 
 .btn-wrp {
   text-align: center;
+
+  &--indent-md{
+    margin-top: 120px;
+  }
 }
 
 .btn {
@@ -43,5 +47,13 @@
     width: 225px;
     font-size: 20px;
     font-family: $menu-font;
+  }
+
+  &--md{
+    width: 220px;
+    padding: 20px 0;
+    .icon-arrow-right{
+      right: 14px;
+    }
   }
 }

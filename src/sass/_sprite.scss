@@ -18,25 +18,37 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 */
 .icon-arrow-right {
   background-image: url(../images/spritesheet.png);
-  background-position: -22px -32px;
+  background-position: -259px -110px;
   width: 9px;
   height: 15px;
 }
 .icon-basket {
   background-image: url(../images/spritesheet.png);
-  background-position: 0px 0px;
+  background-position: -169px -110px;
   width: 38px;
   height: 30px;
 }
 .icon-check {
   background-image: url(../images/spritesheet.png);
-  background-position: -40px 0px;
+  background-position: -209px -110px;
   width: 26px;
   height: 20px;
 }
 .icon-close {
   background-image: url(../images/spritesheet.png);
-  background-position: 0px -32px;
+  background-position: -237px -110px;
   width: 20px;
   height: 20px;
+}
+.icon-snow {
+  background-image: url(../images/spritesheet.png);
+  background-position: -169px 0px;
+  width: 110px;
+  height: 108px;
+}
+.icon-sun {
+  background-image: url(../images/spritesheet.png);
+  background-position: 0px 0px;
+  width: 167px;
+  height: 148px;
 }

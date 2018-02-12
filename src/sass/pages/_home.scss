@@ -1,0 +1,134 @@
+.preview-section {
+  padding-bottom: 80px;
+}
+
+.service-section {
+  position: relative;
+  padding-bottom: 110px;
+  padding-top: 110px;
+  background-color: $second-color;
+
+  &:before{
+    position: absolute;
+    right: 0;
+    top: -100px;
+    content: '';
+    display: block;
+    width: 606px;
+    height: 966px;
+    background: url('../images/bg-marker.png') no-repeat;
+  }
+
+  &:after{
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    content: '';
+    display: block;
+    width: 261px;
+    height: 721px;
+    background: url('../images/bg-marker-2.png') no-repeat 100%;
+  }
+}
+
+.service {
+  max-width: 985px;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+
+  &__row {
+    margin-left: -15px;
+    margin-right: -15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+  }
+
+  &__item {
+    width: 50%;
+    padding-left: 15px;
+    padding-right: 15px;
+
+    .title-item {
+      font-size: 48px;
+      margin-bottom: 25px;
+    }
+
+    .description-item {
+      font-size: 25px;
+      line-height: 33.08px;
+      max-width: 383px;
+    }
+
+    .blue-item,
+    .pink-item {
+      position: relative;
+      padding-top: 30px;
+      padding-left: 30px;
+      padding-right: 30px;
+      min-height: 578px;
+    }
+
+    .blue-item {
+      background-color: $brand-color;
+    }
+
+    .pink-item {
+      background-color: $second-brand-color;
+    }
+
+    .price-block {
+      max-width: 412px;
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: -100px;
+      margin: auto;
+    }
+
+    .img-price-wrp {
+      position: relative;
+      .price-mark {
+        position: absolute;
+        width: 178px;
+        height: 248px;
+        padding-top: 53px;
+        background: url("../images/mark.png") no-repeat center/cover;
+        z-index: 20;
+        top: -50px;
+        right: 0;
+        font-size: 37px;
+        letter-spacing: -1.09px;
+        text-align: center;
+        > span {
+          font-family: $title-font;
+          text-transform: uppercase;
+          font-size: 30px;
+          font-weight: 700;
+        }
+      }
+    }
+  }
+}
+
+.weather-icon {
+  .icon {
+    vertical-align: middle;
+    margin-top: 35px;
+  }
+}
+
+.title-wrp {
+  max-width: 845px;
+  margin: 0 auto;
+}
+
+.title-section {
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+  color: #002d4e;
+}

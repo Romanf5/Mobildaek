@@ -56,6 +56,10 @@ section {
   position: relative;
 }
 
+.decoration{
+  color: $decoration-text-color;
+}
+
 .flex-container {
   display: flex;
   flex-direction: row;
