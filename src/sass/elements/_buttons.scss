@@ -1,14 +1,47 @@
 // Кнопки
 
+.btn-wrp {
+  text-align: center;
+}
+
 .btn {
+  position: relative;
   display: inline-block;
   vertical-align: middle;
   background: none;
   outline: 0 none;
   border: 0 none;
   border-radius: 0;
-  padding: 8px 25px;
-  background-color: #000;
-  text-transform: uppercase;
+  padding: 26px 0;
+  width: 320px;
+  background-color: $brand-color;
+  font-size: 24px;
   color: #fff;
+  transition: 0.5s;
+
+  &:hover {
+    background-color: darken($brand-color, 5%);
+  }
+
+  > .icon-arrow-right {
+    position: absolute;
+    right: 27px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  >.icon-basket{
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    transform: translateY(-50%);
+  }
+
+  &--bask{
+    text-align:left;
+    padding: 17px 0 17px 60px;
+    width: 225px;
+    font-size: 20px;
+    font-family: $menu-font;
+  }
 }

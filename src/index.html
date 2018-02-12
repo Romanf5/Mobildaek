@@ -8,11 +8,38 @@
 </head>
 
 <body>
-@@include('_include/header.html')
+<div class="global-wrapper">
+  @@include('_include/header.html')
 
-@@include('_include/banner-1.html')
+  @@include('_include/banner-1.html')
 
-@@include('_include/footer.html')
-@@include('_include/inc_script.html')
+  <div class="tab-wrp">
+    <ul class="tabs-control">
+      <li class="tabs-control__item"><a class="tab-control" href="#" data-tab-control="1">Book dækskifte</a></li>
+      <li class="tabs-control__item"><a href="#" data-tab-control="2" class="tab-control active-tab">Køb dæk</a></li>
+    </ul>
+    <div class="tabs-content-box">
+      <div class="tab-content" data-tab-index="1">
+        <div class="tab-content-tab-title">
+          Vil Du Spare Tid OG bovl?
+        </div>
+        <div class="btn-wrp">
+          <a href="#" class="btn">Book her<i class="icon icon-arrow-right"></i></a>
+        </div>
+      </div>
+      <div class="tab-content active-content" data-tab-index="2">
+        <div class="tab-content-tab-title">
+          Find dine nye dæk her
+        </div>
+        <div class="btn-wrp">
+          <a href="#" class="btn">Køb her <i class="icon icon-arrow-right"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  @@include('_include/footer.html')
+  @@include('_include/inc_script.html')
+</div>
 </body>
 </html>

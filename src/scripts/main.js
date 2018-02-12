@@ -13,20 +13,21 @@ $(document).ready(function() {
 
   //Tab logik
   function tabHandler(event) {
-    event.preventDefault();
+
     var targetItem = $(event.target);
     var targetItemDataTab = $(event.target).attr('data-tab-control');
-    tabContent.removeClass('active-content');
+
+    tabContent.fadeOut(300);
     targetItem.addClass('active-tab');
     tabControls.not(this).removeClass('active-tab');
 
     tabContent.each(function (index, element) {
       var elementItem = $(element);
-      console.log(elementItem);
       if(targetItemDataTab === elementItem.attr('data-tab-index')){
-        console.log(elementItem.attr('data-tab-index'));
+        elementItem.delay(300).fadeIn(300);
       }
-    })
+    });
+    event.preventDefault();
   }
 
 });
