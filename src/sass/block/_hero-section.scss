@@ -7,6 +7,13 @@
   padding-bottom: 356px;
   padding-left: 239px;
 
+  .img-banner-wrp{
+    position: absolute;
+    img{
+      width: 100%;
+    }
+  }
+
   &:after{
     position: absolute;
     content: '';
@@ -38,15 +45,11 @@
   &--2{
     background: url('../images/bg-banner.png') no-repeat center/cover;
     .img-banner-wrp{
-      position: absolute;
       max-width: 1920px;
       z-index: 3;
       right: 15%;
       left:auto;
       bottom: 0;
-      img{
-        width: 100%;
-      }
     }
 
     &:after{
@@ -61,6 +64,30 @@
       background: url('../images/blue-2.png') no-repeat right;
       bottom: 0;
       right: 0;
+    }
+  }
+
+  &--3{
+    background: url('../images/bg-banner4.png') no-repeat center/cover;
+
+    .img-banner-wrp{
+      max-width: 602px;
+      z-index: 3;
+      left:50%;
+      bottom: 0;
+      transform: translateX(-50%);
+    }
+
+    &:after{
+      width: 212px;
+      height: 510px;
+      background: url('../images/pin-3.png') no-repeat left;
+    }
+
+    &:before{
+      width: 330px;
+      height: 429px;
+      background: url('../images/blue-3.png') no-repeat right;
     }
   }
 }

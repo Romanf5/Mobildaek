@@ -30,6 +30,26 @@
     height: 721px;
     background: url('../images/bg-marker-2.png') no-repeat 100%;
   }
+
+  &--ceo{
+    &:after{
+      overflow: hidden;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      content: '';
+      display: block;
+      width: 245px;
+      height: 514px;
+      background: url('../images/m-ns.png') no-repeat 100% 0;
+    }
+  }
+
+  &--erhversaftale{
+    overflow: hidden;
+    padding-top: 129px;
+    padding-bottom: 65px;
+  }
 }
 
 .service {
