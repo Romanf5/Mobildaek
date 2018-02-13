@@ -117,4 +117,19 @@
       background: url('../images/blue-5.png') no-repeat left;
     }
   }
+
+  &--6{
+    background: url('../images/bg-banner-6.png') no-repeat center/cover;
+    &:before {
+      display: none;
+    }
+
+    &:after {
+      top: 50%;
+      transform: translateY(-50%);
+      width: 200px;
+      height: 607px;
+      background: url('../images/pin-6.png') no-repeat left;
+    }
+  }
 }
