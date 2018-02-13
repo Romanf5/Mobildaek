@@ -30,6 +30,37 @@
   }
 
   &__title{
+    position: relative;
     font-size: 64px;
+    z-index: 10;
+  }
+
+  &--2{
+    background: url('../images/bg-banner.png') no-repeat center/cover;
+    .img-banner-wrp{
+      position: absolute;
+      max-width: 1920px;
+      z-index: 3;
+      right: 15%;
+      left:auto;
+      bottom: 0;
+      img{
+        width: 100%;
+      }
+    }
+
+    &:after{
+      width: 421px;
+      height: 268px;
+      background: url('../images/pin-2.png') no-repeat left;
+    }
+
+    &:before{
+      width: 414px;
+      height: 587px;
+      background: url('../images/blue-2.png') no-repeat right;
+      bottom: 0;
+      right: 0;
+    }
   }
 }
