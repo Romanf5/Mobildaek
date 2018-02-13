@@ -1,5 +1,5 @@
 //banner 1
-.hero-banner{
+.hero-banner {
   position: relative;
   min-height: 788px;
   background-color: #002d4e;
@@ -7,14 +7,14 @@
   padding-bottom: 356px;
   padding-left: 239px;
 
-  .img-banner-wrp{
+  .img-banner-wrp {
     position: absolute;
-    img{
+    img {
       width: 100%;
     }
   }
 
-  &:after{
+  &:after {
     position: absolute;
     content: '';
     display: block;
@@ -25,7 +25,7 @@
     left: 0;
   }
 
-  &:before{
+  &:before {
     position: absolute;
     content: '';
     display: block;
@@ -36,29 +36,29 @@
     right: 0;
   }
 
-  &__title{
+  &__title {
     position: relative;
     font-size: 64px;
     z-index: 10;
   }
 
-  &--2{
+  &--2 {
     background: url('../images/bg-banner.png') no-repeat center/cover;
-    .img-banner-wrp{
+    .img-banner-wrp {
       max-width: 1920px;
       z-index: 3;
       right: 15%;
-      left:auto;
+      left: auto;
       bottom: 0;
     }
 
-    &:after{
+    &:after {
       width: 421px;
       height: 268px;
       background: url('../images/pin-2.png') no-repeat left;
     }
 
-    &:before{
+    &:before {
       width: 414px;
       height: 587px;
       background: url('../images/blue-2.png') no-repeat right;
@@ -67,41 +67,54 @@
     }
   }
 
-  &--3{
+  &--3 {
     background: url('../images/bg-banner4.png') no-repeat center/cover;
 
-    .img-banner-wrp{
+    .img-banner-wrp {
       max-width: 602px;
       z-index: 3;
-      left:50%;
+      left: 50%;
       bottom: 0;
       transform: translateX(-50%);
     }
 
-    &:after{
+    &:after {
       width: 212px;
       height: 510px;
       background: url('../images/pin-3.png') no-repeat left;
     }
 
-    &:before{
+    &:before {
       width: 330px;
       height: 429px;
       background: url('../images/blue-3.png') no-repeat right;
     }
   }
 
-  &--4{
+  &--4 {
     background: url('../images/bg-banner-5.png') no-repeat center/cover;
 
-    &:before{
+    &:before {
       display: none;
     }
 
-    &:after{
+    &:after {
       width: 350px;
       height: 241px;
       background: url('../images/pin-4.png') no-repeat left;
+    }
+  }
+
+  &--5 {
+    background: url('../images/bg-banner-5-1.png') no-repeat center/cover;
+    &:before {
+      display: none;
+    }
+
+    &:after {
+      width: 335px;
+      height: 388px;
+      background: url('../images/blue-5.png') no-repeat left;
     }
   }
 }

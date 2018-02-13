@@ -55,6 +55,34 @@
     padding-top: 129px;
     padding-bottom: 185px;
   }
+
+  &--daekskfite{
+    padding-top: 129px;
+    padding-bottom: 100px;
+
+    &:after{
+      overflow: hidden;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      content: '';
+      display: block;
+      width: 570px;
+      height: 698px;
+      background: url('../images/lg-ns.png') no-repeat 100% 0;
+    }
+
+    &:before{
+      position: absolute;
+      right: 0;
+      top: -150px;
+      content: '';
+      display: block;
+      width: 523px;
+      height: 721px;
+      background: url('../images/sm-ns.png') no-repeat right;
+    }
+  }
 }
 
 .service {
