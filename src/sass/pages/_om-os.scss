@@ -1,0 +1,54 @@
+.ceo-block {
+  position: relative;
+  max-width: 1225px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
+}
+
+.text-content {
+  max-width: 605px;
+
+  .title {
+    font-size: 40px;
+    color: $brand-color;
+    line-height: 47.55px;
+    margin-bottom: 20px;
+  }
+
+  .description,
+  .signature-block,
+  .additional {
+    font-size: 16px;
+    color: $dark-color;
+    margin-bottom: 80px;
+  }
+
+  .signature-block {
+    position: relative;
+
+    &:before {
+      content: '';
+      display: block;
+      width: 213px;
+      height: 88px;
+      background: url('../images/signature.png') no-repeat center/cover;
+      position: absolute;
+      bottom: 15%;
+      left: -6%;
+    }
+  }
+
+  .additional {
+    max-width: 414px;
+    margin-bottom: 0;
+  }
+
+  .ceo-img-wrp{
+    max-width: 659px;
+    position: absolute;
+    bottom: -28%;
+    right: 0;
+    left: auto;
+  }
+}
