@@ -3,7 +3,7 @@
   left: 50%;
   bottom: -70px;
   transform: translateX(-50%);
-  max-width: 1634px;
+  max-width: 1664px;
   padding-left: 15px;
   padding-right: 15px;
   width: 100%;
@@ -62,7 +62,7 @@
     height: 140px;
     background: url('../images/wheel.png') no-repeat ;
     top: 54%;
-    left: -80px;
+    left: -107px;
   }
 
   > div {
@@ -98,8 +98,6 @@
   margin-top: 5px;
   font-size: 16px;
   color: #a6a6a2;
-  font-weight: 500;
-  font-family: $menu-font;
 
   .jq-selectbox__select {
     padding: 23px 19px 23px 17px;
@@ -107,6 +105,11 @@
     align-items: center;
     justify-content: space-between;
     width: 100%;
+  }
+
+  .jq-selectbox__select-text{
+    font-weight: 500;
+    font-family: $menu-font;
   }
 
   .jq-selectbox__trigger-arrow {
@@ -153,6 +156,46 @@
   }
 }
 
+.dots{
+  position: relative;
+
+  &:after{
+    content: '';
+    position: absolute;
+    z-index: 5;
+  }
+
+  &--left{
+    &:after{
+      top: 45%;
+      left: 50px;
+      width: 49px;
+      height: 128px;
+      background: url('../images/dl.png') no-repeat;
+    }
+  }
+
+  &--center{
+    &:after{
+      top: 45%;
+      left: 70px;
+      width: 7px;
+      height: 64px;
+      background: url('../images/dc.png') no-repeat;
+    }
+  }
+
+  &--right{
+    &:after{
+      top: 45%;
+      right: 50px;
+      width: 58px;
+      height: 132px;
+      background: url('../images/dr.png') no-repeat;
+    }
+  }
+}
+
 //Sort select
 
 .sort{
@@ -160,4 +203,14 @@
   position: absolute;
   right: 0;
   bottom: 0;
+
+  .jq-selectbox__select{
+
+    .jq-selectbox__select-text{
+      font-weight: 700;
+      font-size: 24px;
+      font-family: $menu-font;
+    }
+  }
+
 }

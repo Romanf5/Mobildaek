@@ -1,0 +1,36 @@
+.products-section{
+
+  .container{
+    max-width: 1664px;
+    padding: 0 15px;
+    margin: 0 auto;
+  }
+}
+
+.products-row{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.product{
+  width: 25%;
+  border-right: 1px solid #adada9;
+
+  &__brand{
+    max-width: 127px;
+    margin-bottom: 19px;
+
+    >img{
+      width: 100%;
+    }
+  }
+
+  &__title{
+    max-width: 245px;
+    font-size: 33px;
+    font-weight: 700;
+    font-family: $menu-font;
+    color: $dark-color;
+  }
+}
