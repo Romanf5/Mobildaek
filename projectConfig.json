@@ -7,11 +7,14 @@
     "addJs": [
       "./node_modules/jquery/dist/jquery.min.js",
       "./node_modules/popper.js/dist/umd/popper.min.js",
-      "./src/scripts/jquery.poptrox.js"
+      "./src/scripts/jquery.poptrox.js",
+      "./src/scripts/jquery.formstyler.js"
+
 
     ],
     "addCss": [
-      "./node_modules/normalize.css/normalize.css"
+      "./node_modules/normalize.css/normalize.css",
+      "./src/lib_css/jquery.formstyler.css"
     ]
   }
 }

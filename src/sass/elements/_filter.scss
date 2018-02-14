@@ -1,0 +1,163 @@
+.filter-wrp {
+  position: absolute;
+  left: 50%;
+  bottom: -70px;
+  transform: translateX(-50%);
+  max-width: 1634px;
+  padding-left: 15px;
+  padding-right: 15px;
+  width: 100%;
+  box-shadow: 0 0 18px rgba(0, 0, 0, 0.15);
+  padding-top: 30px;
+  padding-bottom: 50px;
+  background-color: $body-bg;
+  z-index: 10;
+
+  .title-filter{
+    font-family: $title-font;
+    font-size: 28px;
+    text-transform: uppercase;
+    color: $dark-color;
+    line-height: 64.55px;
+    letter-spacing: 0.78px;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+}
+
+.filter {
+  max-width: 1400px;
+  margin: 0 auto;
+
+  label {
+    display: block;
+    color: #a6a6a2;
+    font-size: 16px;
+    font-weight: 500;
+    font-family: $menu-font;
+  }
+}
+
+.filter-flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: stretch;
+}
+
+.first-group {
+  position: relative;
+  max-width: 450px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  margin: 0 -15px;
+
+  &:after{
+    position: absolute;
+    content: '';
+    display: block;
+    width: 631px;
+    height: 140px;
+    background: url('../images/wheel.png') no-repeat ;
+    top: 54%;
+    left: -80px;
+  }
+
+  > div {
+    width: 33.33%;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+.second-group {
+  max-width: 760px;
+  width: 100%;
+
+  .row {
+    display: flex;
+    margin: 0 -15px;
+
+    > div {
+      width: 50%;
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+
+    &.first-row {
+      margin-bottom: 25px;
+    }
+  }
+}
+
+.filter-select {
+  width: 100%;
+  background-color: #ecece7;
+  margin-top: 5px;
+  font-size: 16px;
+  color: #a6a6a2;
+  font-weight: 500;
+  font-family: $menu-font;
+
+  .jq-selectbox__select {
+    padding: 23px 19px 23px 17px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .jq-selectbox__trigger-arrow {
+    width: 16px;
+    height: 11px;
+    background: url('../images/arrow-btn.png') no-repeat center;
+  }
+
+  .jq-selectbox__dropdown {
+    border: 1px solid lightgrey;
+    width: 100%;
+    transform: translateY(4px);
+
+    > ul {
+      margin: 0;
+      padding: 0;
+
+      > li {
+        text-align: left;
+        padding: 15px;
+        border-bottom: 1px solid lightgrey;
+        background-color: #ecece7;
+        cursor: pointer;
+        transition: 0.5s;
+
+        &:last-of-type {
+          border: none;
+        }
+
+        &:hover {
+          color: white;
+          background: darken(#ecece7, 10%);
+        }
+
+        &.disabled{
+          background: darken(#ecece7, 10%);
+
+          &:hover{
+            color: #a6a6a2;
+          }
+        }
+      }
+    }
+  }
+}
+
+//Sort select
+
+.sort{
+  width: 278px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}

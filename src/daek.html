@@ -1,0 +1,38 @@
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Daek</title>
+    <meta name="description" content="">
+    @@include('_include/head.html')
+  </head>
+
+  <body>
+  <div class="global-wrapper">
+    @@include('_include/header.html')
+
+    @@include('_include/banner-daek.html')
+
+    <section class="preview-section preview-section--daek">
+      <div class="title-wrp">
+        <h1 class="title-section">127 resultater der matcher</h1>
+        <div class="sort">
+          <label for="sort"></label>
+          <select class="filter-select" name="sort" id="sort">
+            <option disabled selected >Sorter efter pris</option>
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+          </select>
+        </div>
+      </div>
+    </section>
+
+    <section class="gray-section gray-section">
+    </section>
+
+    @@include('_include/footer.html')
+    @@include('_include/inc_script.html')
+  </div>
+  </body>
+  </html>

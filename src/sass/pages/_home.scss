@@ -1,5 +1,14 @@
 .preview-section {
   padding-bottom: 80px;
+
+  &--daek{
+    padding-top: 75px;
+
+    .title-wrp{
+      position: relative;
+      max-width: 1634px;
+    }
+  }
 }
 
 .gray-section {

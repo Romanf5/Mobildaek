@@ -4,6 +4,14 @@ $(document).ready(function () {
   var tabControls = $('.tab-control');
   var playBtn = $('#lightbox');
   var itemMenu = $('.main-nav>li>a');
+  var widthSelect = $('#width-col');
+  var profileSelect = $('#profile-col');
+  var emptySelect = $('#empty-col');
+  var seasonSelect = $('#season-col');
+  var brandSelect = $('#brand-col');
+  var loadSelect = $('#load-col');
+  var speedSelect = $('#speed-col');
+  var sortSelect = $('#sort');
 
   initial();
 
@@ -11,6 +19,7 @@ $(document).ready(function () {
   function initial() {
     tabControls.on('click', tabHandler);
     activeMenuHandler(itemMenu);
+    customSelect();
 
     //LightBox Video
     playBtn.poptrox({
@@ -52,5 +61,17 @@ $(document).ready(function () {
         itemElement.addClass('current-page');
       }
     })
+  }
+
+  //CustomSelects
+  function customSelect() {
+    widthSelect.styler();
+    profileSelect.styler();
+    emptySelect.styler();
+    seasonSelect.styler();
+    brandSelect.styler();
+    loadSelect.styler();
+    speedSelect.styler();
+    sortSelect.styler();
   }
 });

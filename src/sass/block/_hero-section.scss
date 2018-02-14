@@ -118,7 +118,7 @@
     }
   }
 
-  &--6{
+  &--6 {
     background: url('../images/bg-banner-6.png') no-repeat center/cover;
     &:before {
       display: none;
@@ -130,6 +130,50 @@
       width: 200px;
       height: 607px;
       background: url('../images/pin-6.png') no-repeat left;
+    }
+  }
+
+  &--daek {
+    min-height: 625px;
+    padding-top: 170px;
+    background: $dark-color;
+    padding-bottom: 0;
+
+    &:after {
+      width: 285px;
+      height: 465px;
+      background: url('../images/bg-ns.png') no-repeat left top;
+    }
+
+    &:before {
+      width: 836px;
+      height: 514px;
+      background: url('../images/big-m.png') no-repeat right top;
+    }
+
+    .banner-container {
+      max-width: 1665px;
+      margin: 0 auto;
+      padding: 0 15px;
+
+      .text-content {
+        max-width: 795px;
+        padding-left: 40px;
+      }
+
+      .title {
+        font-weight: 700;
+      }
+
+      .title,
+      .description {
+        color: $body-bg;
+        > p:last-of-type {
+          font-size: 22px;
+          font-weight: 700;
+          margin-top: 25px;
+        }
+      }
     }
   }
 }
