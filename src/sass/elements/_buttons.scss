@@ -6,6 +6,10 @@
   &--indent-md{
     margin-top: 120px;
   }
+
+  &--indent-sm{
+    margin-top: 100px;
+  }
 }
 
 .btn {
@@ -53,8 +57,50 @@
     width: 220px;
     padding: 20px 0;
     text-align: center;
+
     .icon-arrow-right{
       right: 14px;
     }
+  }
+
+  &--sm{
+    position: relative;
+    width: 134px;
+    padding: 18px 0;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 700;
+    font-family: $menu-font;
+
+    .icon{
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    &:first-of-type{
+      margin-right: 16px;
+    }
+  }
+
+  &--pink{
+    background-color: #b31655;
+
+    &:hover{
+      background-color: darken(#b31655,5%);
+    }
+  }
+
+  &--heigth-sm{
+    width: 274px;
+    padding: 18px 0;
+    font-family: $menu-font;
+  }
+
+  &--single{
+    padding: 18px 0;
+    text-align: center;
+    width: 180px;
   }
 }

@@ -92,6 +92,24 @@
       background: url('../images/sm-ns.png') no-repeat right;
     }
   }
+
+  &--daekside{
+
+    .title{
+      text-align: center;
+      font-size: 46px;
+      font-weight: 700;
+      text-transform: uppercase;
+      font-family: $title-font;
+      color: $decoration-text-color;
+      margin-bottom: 60px;
+    }
+
+    &:before{
+      display: none;
+    }
+
+  }
 }
 
 .service {

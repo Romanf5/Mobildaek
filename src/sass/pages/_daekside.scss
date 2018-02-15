@@ -1,0 +1,148 @@
+.single-product-wrp {
+  position: relative;
+  padding-top: 100px;
+  padding-bottom: 150px;
+
+  .container {
+    max-width: 1664px;
+    margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  &:after{
+    content: '';
+    display: block;
+    width: 665px;
+    height: 916px;
+    background: url("../images/m-ns-12.png") no-repeat top right;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
+}
+
+.counter-wrp {
+  margin-top: 15px;
+}
+
+.single-counter{
+  position: relative;
+  max-width: 85px;
+  background-color: #ecece7;
+  border: none;
+  outline: none;
+  padding-top: 21px;
+  padding-bottom: 21px;
+  padding-left: 26px;
+  padding-right: 26px;
+  color: #a6a6a2;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 0.45px;
+  font-family: $menu-font;
+  margin-right: 15px;
+
+  .jq-number__field{
+    width: 100%;
+
+    input{
+      padding: 0;
+      width: 100%;
+    }
+  }
+
+  .jq-number__spin{
+    position: absolute;
+    cursor: pointer;
+  }
+
+  .minus{
+    bottom: 12px;
+    right: 9px;
+    width: 16px;
+    height: 10px;
+    background:url("../images/arrow-down.png")no-repeat center ;
+  }
+
+  .plus{
+    top: 12px;
+    right: 9px;
+    width: 16px;
+    height: 10px;
+    background:url("../images/arrow-up.png")no-repeat center ;
+  }
+}
+
+.term{
+  color: #a6a6a2;
+  font-weight: 500;
+  font-family: $menu-font;
+  font-size: 16px;
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+
+.single-specification{
+  position: relative;
+  padding: 47px 51px 41px 51px;
+  background: url('../images/bg-spek.png') no-repeat center/cover;
+
+  &__description{
+    font-family: $menu-font;
+    font-size: 16px;
+    font-weight: 500;
+    max-width: 770px;
+    line-height: 17.06px;
+  }
+
+  &__cahr{
+    display: flex;
+    align-items: stretch;
+    margin-left: -50px;
+    margin-right: -50px;
+    margin-top: 50px;
+  }
+
+  &__img{
+    position: absolute;
+    right: 190px;
+    bottom: 50px;
+    max-width: 320px;
+
+    >img{
+      width: 100%;
+    }
+  }
+}
+
+.char{
+  max-width: 700px;
+
+  &__block{
+    width: 50%;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  &__item{
+    font-family: $menu-font;
+    font-size: 16px;
+  }
+}
+
+.item{
+  margin-bottom: 20px;
+  &__name{
+    display: inline-block;
+    color: #008d9e;
+    font-weight: 700;
+    min-width: 143px;
+    margin-right: 15px;
+  }
+
+  &__value{
+    display: inline-block;
+    font-weight: 500;
+  }
+}

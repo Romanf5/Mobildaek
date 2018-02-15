@@ -12,6 +12,7 @@ $(document).ready(function () {
   var loadSelect = $('#load-col');
   var speedSelect = $('#speed-col');
   var sortSelect = $('#sort');
+  var counterInput = $('#counter');
 
   initial();
 
@@ -55,8 +56,6 @@ $(document).ready(function () {
   function activeMenuHandler(items) {
     items.each(function (index, item) {
       var itemElement = $(item);
-      console.log(itemElement.attr('href'));
-      console.log(itemElement.prop('href'))
       if(itemElement.prop('href') === window.location.href){
         itemElement.addClass('current-page');
       }
@@ -73,5 +72,6 @@ $(document).ready(function () {
     loadSelect.styler();
     speedSelect.styler();
     sortSelect.styler();
+    counterInput.styler();
   }
 });

@@ -1,7 +1,15 @@
 .products-section{
+  padding-bottom: 117px;
+
+  &:after{
+    left: 20px;
+    width: 660px;
+    height: 618px;
+    background: url('../images/daek-m.png') no-repeat top;
+  }
 
   .container{
-    max-width: 1664px;
+    max-width: 1694px;
     padding: 0 15px;
     margin: 0 auto;
   }
@@ -11,11 +19,19 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  margin: 0 -63px 60px;
 }
 
 .product{
   width: 25%;
   border-right: 1px solid #adada9;
+  padding-right: 63px;
+  padding-left: 63px;
+
+  &:last-of-type{
+    border: none;
+  }
+
 
   &__brand{
     max-width: 127px;
@@ -32,5 +48,137 @@
     font-weight: 700;
     font-family: $menu-font;
     color: $dark-color;
+    margin-bottom: 20px;
+
+    &--single{
+      max-width: 100%;
+      font-size: 50px;
+    }
+  }
+
+  &__row{
+    display: flex;
+  }
+
+
+  &__buttons{
+    margin-top: 13px;
+  }
+
+
+  &__img{
+    position: relative;
+  }
+
+  &__bage{
+    position: absolute;
+    top: -35px;
+    right: -15px;
+    width: 115px;
+    height: 140px;
+    background: url('../images/bage.png') no-repeat center;
+    font-size: 17px;
+    text-align: center;
+    line-height: 25.03px;
+    letter-spacing: -1.09px;
+    padding-top: 40px;
+    font-family: $menu-font;
+    font-weight: 700;
+  }
+
+  &--single{
+    padding: 0;
+    width: 50%;
+    border: none;
+  }
+}
+
+.characteristic {
+  &__size{
+    color: #a6a6a2;
+    max-width: 94px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 17.06px;
+    font-family: $menu-font;
+  }
+
+  &__param{
+    color: $decoration-text-color;
+    font-family: $menu-font;
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+    @include clearlist();
+    margin-top: 15px;
+
+    >li{
+      margin-bottom: 10px;
+      >.icon{
+        margin-right: 10px;
+        vertical-align: middle;
+      }
+
+      >span{
+        vertical-align: middle;
+      }
+
+      &:first-of-type{
+        margin-right: 15px;
+        >.icon{
+          margin-right: 15px;
+        }
+      }
+
+      &:last-of-type{
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+.price-item {
+
+  &__pretitle{
+    color: #a6a6a2;
+    font-family: $menu-font;
+    font-size: 16px;
+    font-weight: 500;
+    max-width: 110px;
+    line-height: 17.06px;
+    margin-top: 22px;
+
+    &--single{
+      max-width: 100%;
+      margin-top: 0;
+    }
+  }
+
+  &__amount{
+    margin-top: 10px;
+
+    >span{
+      display: block;
+      font-family: $menu-font;
+      font-size: 44px;
+      color: $brand-color;
+      letter-spacing: -1.51px;
+      font-weight: 700;
+    }
+
+    .decoration-amount{
+      font-family: $title-font;
+      text-transform: uppercase;
+      font-weight: 700;
+      margin-bottom: 5px;
+    }
+
+    &--single{
+      span{
+        font-size: 59px;
+        font-weight: 700;
+        line-height: 82.73px;
+      }
+    }
   }
 }
