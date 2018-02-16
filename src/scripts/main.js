@@ -13,8 +13,14 @@ $(document).ready(function () {
   var speedSelect = $('#speed-col');
   var sortSelect = $('#sort');
   var counterInput = $('#counter');
+  var deliveRadio = $('#delover_1');
+  var delive2Radio = $('#delover_2');
+  var selectbooking = $('.select-booking');
+  var secondAddressChecek = $('#second_address');
+  var nextStepBtn = $('.js-nextStrep');
 
   initial();
+
 
   //Initial function
   function initial() {
@@ -29,6 +35,12 @@ $(document).ready(function () {
       popupWidth: 800,
       popupHeight: 400
     });
+
+    //Second Address group form
+    secondAddressChecek.on('change', showAddress);
+
+    //show step
+    nextStepBtn.on('click', showStep);
   }
 
   //Tab logik
@@ -73,5 +85,22 @@ $(document).ready(function () {
     speedSelect.styler();
     sortSelect.styler();
     counterInput.styler();
+    deliveRadio.styler();
+    delive2Radio.styler();
+    selectbooking.styler();
+    secondAddressChecek.styler();
+  }
+
+  //Show second address
+  function showAddress(){
+    var hiddenGroup = $('.hidden-group');
+    $(this).prop("checked") ? hiddenGroup.css('display','block') : hiddenGroup.removeAttr('style');
+  };
+  
+  //Show Step
+  function showStep() {
+    console.log('work');
+    var stepTwo = $('.step-2-form');
+    stepTwo.addClass('show-step');
   }
 });

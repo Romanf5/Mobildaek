@@ -90,6 +90,7 @@ section {
 
 
 .ancillary-content-wrp{
+  position: relative;
   max-width: 1090px;
   margin: 0 auto;
   padding-top: 40px;
@@ -101,5 +102,33 @@ section {
   &--md{
     max-width: 805px;
     padding-bottom: 80px;
+  }
+
+  &--md-bottom-indent{
+    padding-bottom: 55px;
+  }
+
+  &--lg-bottom-indent{
+    padding-bottom: 95px;
+  }
+
+  &--booking{
+    &:after{
+      position: absolute;
+      top: 98%;
+      left: 50%;
+      transform: translateX(-50%);
+      content: '';
+      display: block;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 20px 14px 0 14px ;
+      border-color: #dbdbd6 transparent transparent transparent;
+    }
+  }
+
+  &--margin-indent{
+    margin-bottom: 52px;
   }
 }

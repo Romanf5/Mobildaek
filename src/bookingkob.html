@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>BookingKob</title>
+  <meta name="description" content="">
+  @@include('_include/head.html')
+</head>
+
+<body>
+<div class="global-wrapper">
+  @@include('_include/header.html')
+
+  <section class="blue-section">
+
+    <div class="ancillary-box">
+
+      <form action="#" class="booking-form">
+        <div
+          class="ancillary-content-wrp ancillary-content-wrp--md-bottom-indent ancillary-content-wrp--booking ancillary-content-wrp--margin-indent">
+          <div class="booking-form__content">
+            <div class="booking-form__title">
+              Afmontering
+            </div>
+
+            <div class="booking-form__title-2">
+              Skal vi opbevare dine afmonterede dæk? Pris fra 395,-
+            </div>
+
+            <div class="btn-wrp btn-wrp--form">
+              <a href="#" class="btn btn--form-sm btn--indent">Nej <i class="icon icon-arrow-right"></i></a>
+              <a href="#" class="btn btn--form-sm">Ja <i class="icon icon-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="ancillary-content-wrp ancillary-content-wrp--booking ancillary-content-wrp--margin-indent">
+          <div class="booking-form__content">
+            <div class="step">1/2</div>
+            <div class="booking-form__title">
+              ???????????
+            </div>
+
+            <div class="booking-form__title-2">
+              Hvad skal der ske med dine afmonterede dæk?
+            </div>
+
+            <div class="radio-buttons">
+
+              <div class="radio-buttons__item">
+                <input class="radio" type="radio" name="delive" value="1" id="delover_1">
+                <div>
+                  <label for="delover_1">Jeg vil selv beholde dem</label>
+                  <div class="subtitle">Mobildæk stiller dem ved din bil</div>
+                </div>
+              </div>
+
+              <div class="radio-buttons__item">
+                <input class="radio" type="radio" name="delive" value="2" id="delover_2">
+                <div>
+                  <label for="delover_2">Mobildæk må godt afskaffer (49,-)</label>
+                  <div class="subtitle">Mobildæk tager dem med og betaler miljøafgiften</div>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="invite">
+              <label>
+                <input type="text" name="invite" class="input" id="input" placeholder="Instast voucher her">
+              </label>
+              <button type="button" class="btn btn--invite">Indløs <i class="icon icon-arrow-right"></i></button>
+            </div>
+
+            <div class="btn-wrp btn-wrp--booing">
+              <button type="button" class="btn btn--form-sm js-nextStrep">Næste <i class="icon icon-arrow-right"></i></button>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="step-2-form">
+
+          <div
+            class="ancillary-content-wrp ancillary-content-wrp--booking ancillary-content-wrp--margin-indent ancillary-content-wrp--lg-bottom-indent">
+            <div class="booking-form__content">
+              <div class="step">2/2</div>
+              <div class="booking-form__title">
+                Bil & dæk informationer
+              </div>
+
+              <div class="booking-form__title-2">
+                Hvilken bil skal have dækskifte?
+              </div>
+
+              <label for="register-number"></label>
+              <input type="text" name="register-number" class="input" id="register-number"
+                     placeholder="Intast dit registreringsnummer">
+
+              <label for="state"></label>
+              <select name="state" id="state" class="select-booking">
+                <option disabled selected>Dækstatus</option>
+                <option value="lorem 1">lorem 1</option>
+                <option value="lorem 2">lorem 2</option>
+                <option value="lorem 3">lorem 3</option>
+                <option value="lorem 4">lorem 4</option>
+              </select>
+
+            </div>
+
+          </div>
+
+          <div class="ancillary-content-wrp ancillary-content-wrp--margin-indent">
+            <div class="booking-form__content">
+              <div class="booking-form__title">
+                Bookinginformationer
+              </div>
+
+              <div class="booking-form__title-2">
+                Hvor skal dækskiftet foregå?
+              </div>
+
+              <div class="group-input">
+
+                <div class="form-row">
+                  <label class="col-wr-6">
+                    <input type="text" name="test" class="input" placeholder="Tast postnummer" id="test">
+                  </label>
+
+                  <label class="col-wr-6">
+                    <input type="text" name="by" class="input" placeholder="By" id="by">
+                  </label>
+                </div>
+
+                <label for="address"></label>
+                <input type="text" name="address" class="input" id="address" placeholder="Adresse for dækskifte">
+
+                <div class="form-row">
+                  <label class="col-wr-6">
+                    <input type="text" name="name" class="input" placeholder="Fornavn" id="name">
+                  </label>
+
+                  <label class="col-wr-6">
+                    <input type="text" name="last_name" class="input" placeholder="Efternavn" id="last_name">
+                  </label>
+                </div>
+
+                <div class="form-row">
+                  <label class="col-wr-6">
+                    <input type="text" name="input1" class="input" placeholder="" id="input1">
+                  </label>
+
+                  <label class="col-wr-6">
+                    <input type="text" name="input2" class="input" placeholder="" id="input2">
+                  </label>
+                </div>
+
+              </div>
+
+              <div class="second-pay-adress">
+                <input type="checkbox" name="second_pay_address" value="1" id="second_address">
+                <label for="second_address">Anden fakturerings adresse?</label>
+              </div>
+
+              <div class="group-input hidden-group">
+
+                <div class="form-row">
+                  <label class="col-wr-6">
+                    <input type="text" name="test" class="input" placeholder="Tast postnummer" id="test">
+                  </label>
+
+                  <label class="col-wr-6">
+                    <input type="text" name="by" class="input" placeholder="By" id="by">
+                  </label>
+                </div>
+
+                <label for="address"></label>
+                <input type="text" name="address" class="input" id="address" placeholder="Adresse for dækskifte">
+
+                <div class="form-row">
+                  <label class="col-wr-6">
+                    <input type="text" name="name" class="input" placeholder="Fornavn" id="name">
+                  </label>
+
+                  <label class="col-wr-6">
+                    <input type="text" name="last_name" class="input" placeholder="Efternavn" id="last_name">
+                  </label>
+                </div>
+
+                <div class="form-row">
+                  <label class="col-wr-6">
+                    <input type="text" name="input1" class="input" placeholder="" id="input1">
+                  </label>
+
+                  <label class="col-wr-6">
+                    <input type="text" name="input2" class="input" placeholder="" id="input2">
+                  </label>
+                </div>
+
+              </div>
+
+              <label for="comment"></label>
+              <textarea name="comment" id="comment" class="comment" placeholder="Bemærkninger"></textarea>
+
+            </div>
+
+          </div>
+        </div>
+      </form>
+
+    </div>
+
+  </section>
+
+  @@include('_include/footer.html')
+  @@include('_include/inc_script.html')
+</div>
+</body>
+</html>

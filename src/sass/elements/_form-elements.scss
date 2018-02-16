@@ -22,3 +22,26 @@ select {
   font-size: 16px;
 }
 
+button{
+  cursor: pointer;
+}
+
+.input[type="text"],
+textarea{
+  padding: 21px 21px;
+  font-family: $menu-font;
+
+  &::placeholder {
+    font-size: 16px;
+    color: #a6a6a2;
+    font-weight: 500;
+  }
+
+  &:focus {
+    &::placeholder {
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+  }
+}
+

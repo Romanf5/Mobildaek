@@ -1,0 +1,248 @@
+.booking-form{
+
+  &__content{
+    max-width: 935px;
+    margin: 0 auto;
+    font-family: $menu-font;
+  }
+
+  &__title,
+  &__title-2{
+    text-align: center;
+  }
+
+  &__title{
+    font-size: 40px;
+    font-weight: 700;
+    color: $brand-color;
+    margin-bottom: 5px;
+  }
+
+  &__title-2{
+    font-family: $title-font;
+    text-transform: uppercase;
+    font-size: 28px;
+    color: $dark-color;
+    letter-spacing: 0.78px;
+    line-height: 64.55px;
+  }
+}
+
+.radio-buttons{
+  max-width: 700px;
+  margin: 35px auto 0 ;
+  display: flex;
+  align-items: stretch;
+
+
+  &__item{
+    width: 50%;
+    display: flex;
+
+    label{
+      display: inline-block;
+      font-size: 18px;
+      font-weight: 700;
+      color: $brand-color;
+      margin-bottom: 12px;
+    }
+
+    .subtitle {
+      font-size: 14px;
+      color: #a6a6a2;
+    }
+  }
+}
+
+.radio {
+  width: 34px;
+  height: 34px;
+  border: 6px solid #cecec8;
+  border-radius: 50%;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  margin-right: 10px;
+
+  .jq-radio__div{
+    width: 16px;
+    height: 16px;
+    background-color: $brand-color;
+    border-radius: 50%;
+    visibility: hidden;
+  }
+
+  &.checked{
+    .jq-radio__div{
+      visibility: visible;
+    }
+  }
+
+}
+
+.invite{
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-top: 40px;
+
+  label{
+    display: inline-block;
+    max-width:766px;
+    width: 100%;
+    margin-right: 5px;
+  }
+
+  .input{
+    margin: 0;
+  }
+}
+
+.select-booking{
+  width: 100%;
+  background-color: $body-bg;
+  font-size: 16px;
+  font-weight: 500;
+  color: #a6a6a2;
+
+  .jq-selectbox__select{
+    display: flex;
+    padding: 21px;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .jq-selectbox__dropdown{
+    background-color: $body-bg;
+    width: 100%;
+    top: 62px ;
+
+    ul{
+      @include clearlist;
+
+      >li{
+        margin-bottom: 15px;
+        padding: 10px 21px 10px 21px;
+        cursor: pointer;
+
+        &:last-of-type{
+          margin-bottom: 0;
+        }
+
+        &:hover{
+          color: $brand-color;
+        }
+
+        &.disabled{
+          background-color: lightgrey;
+
+          &:hover{
+            color: #a6a6a2;
+          }
+        }
+      }
+    }
+  }
+
+  .jq-selectbox__select-text{
+    width: 100%;
+  }
+
+  .jq-selectbox__trigger-arrow{
+    cursor: pointer;
+    width: 16px;
+    height: 10px;
+    background: url('../images/arrow-down.png') no-repeat center;
+  }
+}
+
+.step{
+  width: 73px;
+  height: 100px;
+  position: absolute;
+  top: 24px;
+  left: 24px;
+  background: url('../images/step-marker.png') no-repeat center/cover;
+  font-size: 18px;
+  color: $brand-color;
+  font-weight: 700;
+  text-align: center;
+  padding-top: 27px;
+}
+
+.form-row{
+  display: flex;
+  align-items: stretch;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+.col-wr-6{
+  display: block;
+  width: 50%;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+
+.jq-checkbox{
+  position: relative;
+  width: 26px;
+  height: 26px;
+  background-color: #ffffff;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  vertical-align: middle;
+
+
+  &__div{
+    width: 20px;
+    height: 20px;
+    background-color: transparent;
+  }
+
+  &.checked{
+    .jq-checkbox__div{
+      background-color: $brand-color;
+    }
+  }
+}
+
+.second-pay-adress{
+  margin-top: 25px;
+  margin-bottom: 25px;
+
+  label{
+    vertical-align: middle;
+    font-size: 16px;
+    color: #a6a6a2;
+    letter-spacing: 0.45px;
+    font-family: $main-font;
+  }
+}
+
+.comment{
+  resize: none;
+  max-width: 455px;
+  min-height: 120px;
+}
+
+// JS
+
+.hidden-group{
+  display: none;
+}
+
+.step-2-form{
+  display: none;
+}
+
+.show-step{
+  display: block;
+}
