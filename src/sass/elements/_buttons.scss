@@ -103,4 +103,30 @@
     text-align: center;
     width: 180px;
   }
+
+  &__attach{
+    text-align: center;
+    font-size: 16px;
+    font-weight: 700;
+    font-family: $menu-font;
+    padding: 13px 0;
+    width: 212px;
+
+    >.icon{
+      right: 10px;
+    }
+  }
+
+  &--lg{
+    width: 350px;
+    padding: 18px 0;
+    font-size: 22px;
+    letter-spacing: 0.56px;
+    font-family: $menu-font;
+    font-weight: 700;
+
+    >.icon{
+      right:10px;
+    }
+  }
 }

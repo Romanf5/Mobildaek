@@ -16,17 +16,35 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 // HTML
 <i class="icon icon-home"></i>
 */
+.icon-1 {
+  background-image: url(../images/spritesheet.png);
+  background-position: -281px -194px;
+  width: 40px;
+  height: 45px;
+}
 .icon-1prise {
   background-image: url(../images/spritesheet.png);
   background-position: -95px -150px;
   width: 85px;
   height: 87px;
 }
+.icon-2 {
+  background-image: url(../images/spritesheet.png);
+  background-position: -281px -147px;
+  width: 40px;
+  height: 45px;
+}
 .icon-2sprite {
   background-image: url(../images/spritesheet.png);
   background-position: -281px -74px;
   width: 79px;
   height: 71px;
+}
+.icon-3 {
+  background-image: url(../images/spritesheet.png);
+  background-position: -323px -147px;
+  width: 40px;
+  height: 45px;
 }
 .icon-3sprite {
   background-image: url(../images/spritesheet.png);
@@ -42,61 +60,79 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 }
 .icon-arrow-right-pin {
   background-image: url(../images/spritesheet.png);
-  background-position: -355px -179px;
+  background-position: -323px -226px;
   width: 8px;
   height: 12px;
 }
 .icon-arrow-right {
   background-image: url(../images/spritesheet.png);
-  background-position: -306px -210px;
+  background-position: -352px -241px;
   width: 9px;
   height: 15px;
 }
 .icon-basket {
   background-image: url(../images/spritesheet.png);
-  background-position: -281px -147px;
+  background-position: -323px -194px;
   width: 38px;
   height: 30px;
 }
 .icon-c1 {
   background-image: url(../images/spritesheet.png);
-  background-position: -345px -147px;
+  background-position: -119px -239px;
   width: 18px;
   height: 28px;
 }
 .icon-c2 {
   background-image: url(../images/spritesheet.png);
-  background-position: -321px -147px;
+  background-position: -95px -239px;
   width: 22px;
   height: 29px;
 }
 .icon-c3 {
   background-image: url(../images/spritesheet.png);
-  background-position: -281px -179px;
+  background-position: -328px -241px;
   width: 22px;
   height: 29px;
 }
 .icon-check {
   background-image: url(../images/spritesheet.png);
-  background-position: -305px -179px;
+  background-position: -209px -110px;
   width: 26px;
   height: 20px;
 }
 .icon-close {
   background-image: url(../images/spritesheet.png);
-  background-position: -333px -179px;
+  background-position: -237px -110px;
   width: 20px;
   height: 20px;
 }
 .icon-fb {
   background-image: url(../images/spritesheet.png);
-  background-position: -281px -249px;
+  background-position: -24px -279px;
   width: 12px;
   height: 19px;
 }
+.icon-ic1 {
+  background-image: url(../images/spritesheet.png);
+  background-position: 0px -279px;
+  width: 22px;
+  height: 40px;
+}
+.icon-ic2 {
+  background-image: url(../images/spritesheet.png);
+  background-position: -281px -241px;
+  width: 45px;
+  height: 30px;
+}
+.icon-ic3 {
+  background-image: url(../images/spritesheet.png);
+  background-position: -169px -110px;
+  width: 38px;
+  height: 26px;
+}
 .icon-in {
   background-image: url(../images/spritesheet.png);
-  background-position: -281px -229px;
+  background-position: -259px -110px;
   width: 18px;
   height: 18px;
 }
@@ -120,7 +156,7 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 }
 .icon-yt {
   background-image: url(../images/spritesheet.png);
-  background-position: -281px -210px;
+  background-position: -139px -239px;
   width: 23px;
   height: 17px;
 }

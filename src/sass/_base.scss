@@ -54,6 +54,7 @@ section {
 
 .global-wrapper {
   position: relative;
+
 }
 
 .decoration{
@@ -70,5 +71,35 @@ section {
 
   &--align-cenetr{
     align-items: center;
+  }
+}
+
+.ancillary-box{
+  max-width: 1215px;
+  margin: 0 auto;
+  background-color: $body-bg;
+  padding-top: 64px;
+  padding-bottom: 64px;
+  padding-left: 15px;
+  padding-right: 15px;
+
+  &--md{
+    max-width: 910px;
+  }
+}
+
+
+.ancillary-content-wrp{
+  max-width: 1090px;
+  margin: 0 auto;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: #dbdbd6;
+  padding-left: 15px;
+  padding-right: 15px;
+
+  &--md{
+    max-width: 805px;
+    padding-bottom: 80px;
   }
 }

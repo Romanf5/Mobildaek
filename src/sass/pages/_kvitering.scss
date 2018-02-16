@@ -1,0 +1,138 @@
+.blue-section{
+  position: relative;
+  background-color: #012e4f;
+  padding-top: 150px;
+  padding-bottom: 130px;
+  padding-left: 15px;
+  padding-right: 15px;
+  overflow: hidden;
+
+  &:before{
+    position: absolute;
+    left: 0;
+    top: 180px;
+    content: '';
+    display: block;
+    width: 200px;
+    height: 610px;
+    background: url("../images/m-ns-k.png") no-repeat;
+  }
+
+  &:after{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    content: '';
+    display: block;
+    width: 302px;
+    height: 731px;
+    background: url("../images/m-ns-kb.png") no-repeat;
+  }
+}
+
+.payment-invoice{
+  max-width: 570px;
+  margin: 0 auto;
+
+  &__section{
+    border-bottom: 1px solid #b3b3b0;
+
+  }
+
+  &__header{
+    padding-bottom: 50px;
+  }
+
+  &__attach-info{
+    padding-top: 21px;
+  }
+
+}
+
+.payment-header{
+  text-align: center;
+  color: $dark-color;
+  font-size: 16px;
+  font-family: $menu-font;
+
+  &__title{
+    color: $brand-color;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 64.55px;
+    margin-bottom: 15px;
+  }
+
+  &__title-2{
+    font-size: 28px;
+    text-transform: uppercase;
+    font-family: $title-font;
+    line-height: 64.55px;
+    letter-spacing: 0.78px;
+  }
+
+  &__description{
+    font-size: 16px;
+  }
+}
+
+.attach-info{
+  font-family: $menu-font;
+  font-size: 16px;
+
+  &--no-indent{
+    padding-top: 0;
+  }
+
+  &__header{
+    display: flex;
+    justify-content: space-between;
+    color: $brand-color;
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 5px;
+    margin-top: 5px;
+  }
+
+  &__char{
+    @include clearlist;
+    margin-bottom: 30px;
+    margin-top: 25px;
+
+    >li{
+      display: flex;
+      align-items: center;
+      color: $dark-color;
+      margin-bottom: 2px;
+
+      &:last-of-type{
+        margin-bottom: 0;
+      }
+
+      .icon{
+        margin-right: 10px;
+      }
+    }
+  }
+
+  &__address{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    font-family: $menu-font;
+    color: $dark-color;
+    margin-top: 10px;
+    margin-bottom: 30px;
+  }
+}
+
+.payment-review{
+  max-width: 360px;
+  margin: 70px auto 40px;
+  font-size: 12px;
+  font-family: $menu-font;
+  letter-spacing: 0.34px;
+  text-align: center;
+  color: $dark-color;
+
+}
