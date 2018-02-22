@@ -79,7 +79,7 @@
           </div>
         </div>
 
-        <div class="step-2-form">
+        <div class="step-2-formm">
 
           <div
             class="ancillary-content-wrp ancillary-content-wrp--booking ancillary-content-wrp--margin-indent ancillary-content-wrp--lg-bottom-indent">
@@ -202,8 +202,41 @@
               <label for="comment"></label>
               <textarea name="comment" id="comment" class="comment" placeholder="Bemærkninger"></textarea>
 
+              <div class="booking-form__title-2">
+                Hvad skal der ske med dine afmonterede dæk?
+              </div>
+
+              <div class="form-datepicker">
+                <div class="js-open-date-modal">
+                  <input type="text" name="date" class="input form-datepicker__input" id="date-input" placeholder="Vælg dato og tid" disabled>
+                </div>
+                <div class="date-modal">
+                  <div class="date-modal__picker">
+                    <div id="date-picker"></div>
+                  </div>
+                  <div class="date-modal__time">
+                    <div class="date-modal__time-title">
+                      Ondag d. 10 februar
+                    </div>
+                    <div class="date-modal__time-wrap">
+                      <input type="radio" name="time" id="time-1" class="js-custom-radio radio radio--small">
+                      <label for="time-1">kl. 08.00-12.00</label>
+                    </div>
+                    <div class="date-modal__time-wrap">
+                      <input type="radio" name="time" id="time-2" class="js-custom-radio radio radio--small">
+                      <label for="time-2">kl. 12.00-16.00</label>
+                    </div>
+                    <div class="date-modal__time-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit</div>
+                  </div>
+                </div>
+              </div>
+
             </div>
 
+          </div>
+
+          <div class="btn-wrp">
+            <button class="btn btn--md btn--form">Læg i kurv <i class="icon icon-arrow-right"></i></button>
           </div>
         </div>
       </form>

@@ -71,6 +71,15 @@
     }
   }
 
+  &--form{
+    font-family: $menu-font;
+    font-weight: 700;
+
+    .icon-arrow-right{
+      right: 20px;
+    }
+  }
+
   &--sm{
     position: relative;
     width: 134px;

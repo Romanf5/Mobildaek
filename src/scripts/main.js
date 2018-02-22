@@ -41,6 +41,9 @@ $(document).ready(function () {
 
     //show step
     nextStepBtn.on('click', showStep);
+
+    // init custom radio buttons
+    $('.js-custom-radio').styler();
   }
 
   //Tab logik
@@ -96,11 +99,30 @@ $(document).ready(function () {
     var hiddenGroup = $('.hidden-group');
     $(this).prop("checked") ? hiddenGroup.css('display','block') : hiddenGroup.removeAttr('style');
   };
-  
+
   //Show Step
   function showStep() {
     console.log('work');
     var stepTwo = $('.step-2-form');
     stepTwo.addClass('show-step');
   }
+
+  // init datepicker
+  var $datepicker = $('#date-picker');
+  $datepicker.datepicker({
+    beforeShowDay: $.datepicker.noWeekends,
+    showWeek: true
+  }, $.datepicker.regional[ "da" ]);
+
+  $datepicker.datepicker('show');
+
+  // open datepicker
+  var $dateinput = $('#date-input');
+  console.log($dateinput);
+  var $datemodal = $('.date-modal');
+
+  $('.js-open-date-modal').on('click', function() {
+    $datemodal.toggleClass('date-modal--open');
+  });
+
 });

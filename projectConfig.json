@@ -8,13 +8,14 @@
       "./node_modules/jquery/dist/jquery.min.js",
       "./node_modules/popper.js/dist/umd/popper.min.js",
       "./src/scripts/jquery.poptrox.js",
-      "./src/scripts/jquery.formstyler.js"
-
-
+      "./src/scripts/jquery.formstyler.js",
+      "./src/scripts/jquery-ui.js",
+      "./src/scripts/datepicker-da.js"
     ],
     "addCss": [
       "./node_modules/normalize.css/normalize.css",
-      "./src/lib_css/jquery.formstyler.css"
+      "./src/lib_css/jquery.formstyler.css",
+      "./src/lib_css/jquery-ui.structure.css"
     ]
   }
 }

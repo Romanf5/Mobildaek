@@ -64,6 +64,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  flex-shrink: 0;
   cursor: pointer;
   margin-right: 10px;
 
@@ -81,6 +82,16 @@
     }
   }
 
+  &--small {
+    width: 20px;
+    height: 20px;
+    border-width: 1px;
+
+    .jq-radio__div {
+      width: 10px;
+      height: 10px;
+    }
+  }
 }
 
 .invite{
@@ -245,4 +256,159 @@
 
 .show-step{
   display: block;
+}
+
+// form datepicker
+.form-datepicker {
+  position: relative;
+
+  #date-input {
+    background-image: url('../images/arrow-down.png');
+    background-repeat: no-repeat;
+    background-position: center right 25px;
+  }
+}
+
+#date-picker {
+  width: 100%;
+  max-width: 305px;
+}
+
+.date-modal {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  background-color: #fff;
+  box-shadow: 0 0 18px rgba(0, 0, 0, 0.07);
+  color: $brand-color;
+  padding: 20px 30px;
+  padding-bottom: 35px;
+
+  &--open {
+    display: flex;
+  }
+
+  &__picker {
+    flex: 0 1 50%;
+    font-size: 16px;
+
+    .ui-datepicker {
+      width: 100%;
+    }
+
+    .ui-datepicker-title {
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 1;
+      margin-bottom: 10px;
+    }
+
+    .ui-datepicker-prev,
+    .ui-datepicker-next {
+      width: 20px;
+      height: 23px;
+
+      .ui-icon {
+        width: 10px;
+        height: 16px;
+        background: url('../images/arrow-right.png') no-repeat center;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+      }
+    }
+
+    .ui-datepicker-prev {
+      .ui-icon {
+        transform: rotate(180deg);
+      }
+    }
+
+    th {
+      //text-align: left;
+
+      &.ui-datepicker-week-col {
+        padding-left: 0;
+        text-align: left;
+      }
+
+      &:not(.ui-datepicker-week-col) {
+        text-transform: lowercase;
+      }
+    }
+
+    td {
+
+      span,
+      a {
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        padding: 0 6px;
+        font-weight: 500;
+        text-align: left;
+      }
+
+      a {
+        color: inherit;
+        &:hover {
+          background-color: #dbdbd6;
+        }
+
+        &.ui-state-active {
+          background-color: $brand-color;
+          color: #fff;
+        }
+      }
+
+      &.ui-state-disabled {
+        color: #a6a6a2;
+      }
+
+      &.ui-datepicker-week-col {
+        width: 60px;
+      }
+    }
+  }
+
+  &__time {
+    flex: 0 1 50%;
+    padding-top: 40px;
+    padding-left: 50px;
+  }
+
+  &__time-title {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1;
+    margin-bottom: 14px;
+  }
+
+  &__time-wrap {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+
+    input {
+      flex-shrink: 0;
+    }
+
+    label {
+      font-size: 16px;
+      font-weight: 700;
+    }
+  }
+
+  &__time-text {
+    margin-top: 50px;
+    max-width: 250px;
+    font-size: 16px;
+    color: #a6a6a2;
+  }
 }
