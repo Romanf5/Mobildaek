@@ -7,6 +7,7 @@
     "addJs": [
       "./node_modules/jquery/dist/jquery.min.js",
       "./node_modules/popper.js/dist/umd/popper.min.js",
+      "./node_modules/moment/min/moment-with-locales.min.js",
       "./src/scripts/jquery.poptrox.js",
       "./src/scripts/jquery.formstyler.js",
       "./src/scripts/jquery-ui.js",

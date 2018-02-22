@@ -107,22 +107,39 @@ $(document).ready(function () {
     stepTwo.addClass('show-step');
   }
 
-  // init datepicker
-  var $datepicker = $('#date-picker');
-  $datepicker.datepicker({
-    beforeShowDay: $.datepicker.noWeekends,
-    showWeek: true
-  }, $.datepicker.regional[ "da" ]);
+  // booking form datepicker
+  var $bookingForm = $('.booking-form');
 
-  $datepicker.datepicker('show');
+  if ($bookingForm.length > 0) {
+    var $datepicker = $('#date-picker');
+    var $datemodal = $('.date-modal');
+    var $dateInput = $('#date-input');
 
-  // open datepicker
-  var $dateinput = $('#date-input');
-  console.log($dateinput);
-  var $datemodal = $('.date-modal');
+    // init datepicker
+    $datepicker.datepicker({
+      beforeShowDay: $.datepicker.noWeekends,
+      showWeek: true
+    }, $.datepicker.regional["da"]);
 
-  $('.js-open-date-modal').on('click', function() {
-    $datemodal.toggleClass('date-modal--open');
-  });
+    // open datepicker
+    $('.js-open-date-modal').on('click', function () {
+      $datemodal.toggleClass('date-modal--open');
+    });
 
+    // momentjs
+    // set locale danish
+    moment.locale('da');
+
+    // set date
+    $setDateBtn = $('.js-set-form-date');
+
+    $setDateBtn.on('click', function (e) {
+      var currentDate = $datepicker.datepicker("getDate");
+      var dateFormated = moment(currentDate).format("dddd [d.] Do MMMM YYYY");
+      var dateTime = $bookingForm.find('.date-modal__time input:checked').val();
+      var visitedDate = dateFormated + ' - kl. ' + dateTime;
+      $dateInput.val(visitedDate);
+      $datemodal.removeClass('date-modal--open');
+    });
+  }
 });

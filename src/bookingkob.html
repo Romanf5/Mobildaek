@@ -207,26 +207,30 @@
               </div>
 
               <div class="form-datepicker">
-                <div class="js-open-date-modal">
-                  <input type="text" name="date" class="input form-datepicker__input" id="date-input" placeholder="Vælg dato og tid" disabled>
-                </div>
+                <div class="js-open-date-modal form-datepicker__open-modal"></div>
+                <input type="text" name="date" class="input form-datepicker__input" id="date-input" placeholder="Vælg dato og tid" disabled>
                 <div class="date-modal">
-                  <div class="date-modal__picker">
-                    <div id="date-picker"></div>
+                  <div class="date-modal__inner">
+                    <div class="date-modal__picker">
+                      <div id="date-picker"></div>
+                    </div>
+                    <div class="date-modal__time">
+                      <div class="date-modal__time-title">
+                        Ondag d. 10 februar
+                      </div>
+                      <div class="date-modal__time-wrap">
+                        <input type="radio" name="time" id="time-1" class="js-custom-radio radio radio--small" checked="checked" value="08.00-12.00">
+                        <label for="time-1">kl. 08.00-12.00</label>
+                      </div>
+                      <div class="date-modal__time-wrap">
+                        <input type="radio" name="time" id="time-2" class="js-custom-radio radio radio--small" value="12.00-16.00">
+                        <label for="time-2">kl. 12.00-16.00</label>
+                      </div>
+                      <div class="date-modal__time-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit</div>
+                    </div>
                   </div>
-                  <div class="date-modal__time">
-                    <div class="date-modal__time-title">
-                      Ondag d. 10 februar
-                    </div>
-                    <div class="date-modal__time-wrap">
-                      <input type="radio" name="time" id="time-1" class="js-custom-radio radio radio--small">
-                      <label for="time-1">kl. 08.00-12.00</label>
-                    </div>
-                    <div class="date-modal__time-wrap">
-                      <input type="radio" name="time" id="time-2" class="js-custom-radio radio radio--small">
-                      <label for="time-2">kl. 12.00-16.00</label>
-                    </div>
-                    <div class="date-modal__time-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit</div>
+                  <div class="btn-wrp">
+                    <button class="btn btn--sm js-set-form-date" type="button">OK</button>
                   </div>
                 </div>
               </div>
