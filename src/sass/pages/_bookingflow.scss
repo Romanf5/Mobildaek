@@ -1,0 +1,114 @@
+.form-row--start{
+  align-items: flex-start;
+}
+
+.col-wr-4{
+  display: block;
+  width: 33.33%;
+  padding-left: 15px;
+  padding-right: 15px;
+
+  &:first-of-type{
+
+    .plan__name{
+      background: url('../images/basick.png') no-repeat center;
+    }
+  }
+
+  &:nth-of-type(2){
+
+    .plan__name{
+      background: url('../images/plus.png') no-repeat center;
+      color: $brand-color;
+    }
+  }
+
+  &:last-of-type{
+
+    .plan__name{
+      background: url('../images/prim.png') no-repeat center;
+      color:#b31655;
+    }
+
+  }
+}
+
+.plan{
+  background-color: $body-bg;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-top: 40px;
+  padding-bottom: 30px;
+  box-shadow: 0 0 18px rgba(0, 0, 0, 0.07);
+  cursor: pointer;
+  transition: 0.7s;
+  position: relative;
+  z-index: 100;
+
+  &__name{
+    max-width: 175px;
+    min-height: 240px;
+    margin: 0 auto 26px;
+    text-align: center;
+    padding-top: 80px;
+    font-family: $menu-font;
+    color: $dark-color;
+    font-size: 18px;
+    font-weight: 700;
+  }
+
+  &__service{
+    @include clearlist;
+    min-height: 365px;
+
+    >li{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 2px solid #d5d5d1;
+      padding-bottom: 12px;
+      padding-top: 12px;
+
+      &:last-of-type{
+        border-bottom: none;
+      }
+
+      &:first-of-type{
+        border-top: 0;
+      }
+
+      >i{
+        flex-shrink: 0;
+        margin-right: 10px;
+      }
+
+      >span{
+        font-family: $menu-font;
+        color: #a6a6a2;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 20px;
+      }
+    }
+  }
+
+  &:hover{
+    transform: scale(1.215);
+    box-shadow: 0 0 18px rgba(0, 0, 0, 0.5);
+    z-index: 101;
+  }
+
+}
+
+.price-radio{
+  display: flex;
+  align-items: center;
+  max-width: 130px;
+  margin-left: auto;
+
+
+  label{
+    font-size: 30px;
+    color: $brand-color;
+  }
+}

@@ -1,8 +1,13 @@
 .tab-wrp {
-   max-width: 705px;
-   margin: 0 auto;
-    transform: translateY(-140px);
- }
+  max-width: 705px;
+  margin: 0 auto;
+  width: 100%;
+  position: absolute;
+  bottom: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 100;
+}
 
 .tabs-content-box {
   background-color: $body-bg;
@@ -11,7 +16,7 @@
   box-shadow: 0 0 18px rgba(0, 0, 0, 0.15);
 }
 
-.tab-content-tab-title{
+.tab-content-tab-title {
   font-family: $title-font;
   font-size: 28px;
   letter-spacing: 0.78px;
@@ -21,16 +26,16 @@
   text-align: center;
 }
 
-.tabs-control{
+.tabs-control {
   padding: 0;
   margin: 0;
   list-style: none;
   display: flex;
 
-  &__item{
+  &__item {
     width: 50%;
 
-    >a{
+    > a {
       display: block;
       background-color: #ecece7;
       color: $decoration-text-color;
@@ -41,7 +46,7 @@
       box-shadow: inset 0 0 18px rgba(0, 0, 0, 0.15);
       transition: 0.5s;
 
-      &.active-tab{
+      &.active-tab {
         background-color: $body-bg;
         box-shadow: none;
       }
@@ -49,10 +54,10 @@
   }
 }
 
-.tab-content{
+.tab-content {
   display: none;
 
-  &.active-content{
+  &.active-content {
     display: block;
   }
 }

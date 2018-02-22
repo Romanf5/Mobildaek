@@ -1,5 +1,6 @@
 .main-nav{
   @include clearlist();
+  margin-right: 25px;
 
   &__item{
     display: inline-block;

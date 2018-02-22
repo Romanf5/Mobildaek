@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>BookingKob</title>
+  <meta name="description" content="">
+  @@include('_include/head.html')
+</head>
+
+<body>
+<div class="global-wrapper">
+  @@include('_include/header.html')
+
+  <section class="blue-section">
+
+    <div class="ancillary-box">
+
+      <form action="#" class="booking-form">
+
+        <div class="ancillary-content-wrp ancillary-content-wrp--booking ancillary-content-wrp--margin-indent">
+          <div class="booking-form__content">
+            <div class="step">1/2</div>
+            <div class="booking-form__title">
+              Pakkevalg
+            </div>
+
+            <div class="booking-form__title-2">
+              Hvad skal der ske med dine dæk?
+            </div>
+
+            <div class="form-row form-row--start">
+              <div class="col-wr-4">
+                <div class="plan">
+                  <div class="plan__name">
+                    Basis
+                  </div>
+                  <ul class="plan__service">
+                    <li><i class="icon icon-icon1"></i><span>Sæson dækskifte</span></li>
+                    <li><i class="icon icon-icon2"></i><span>Sæson opbevaring</span></li>
+                  </ul>
+
+                  <div class="price-radio">
+                    <input class="radio js-custom-radio" type="radio" name="price" value="1" id="price1">
+                    <div>
+                      <label for="price1">595,-</label>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+              <div class="col-wr-4">
+                <div class="plan">
+                  <div class="plan__name">
+                    Plus
+                  </div>
+                  <ul class="plan__service">
+                    <li><i class="icon icon-icon1"></i><span>Sæson dækskifte</span></li>
+                    <li><i class="icon icon-icon2"></i><span>Sæson opbevaring</span></li>
+                    <li><i class="icon icon-icon3"></i><span>Vask af 4 stk. dæk og fælge</span></li>
+                  </ul>
+
+                  <div class="price-radio">
+                    <input class="radio js-custom-radio" type="radio" name="price" value="1" id="price2" checked>
+                    <div>
+                      <label for="price2">795,-</label>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+              <div class="col-wr-4">
+                <div class="plan">
+                  <div class="plan__name">
+                    Premium
+                  </div>
+                  <ul class="plan__service">
+                    <li><i class="icon icon-icon1"></i><span>Sæson dækskifte</span></li>
+                    <li><i class="icon icon-icon2"></i><span>Sæson opbevaring</span></li>
+                    <li><i class="icon icon-icon3"></i><span>Vask af 4 stk. dæk og fælge</span></li>
+                    <li><i class="icon icon-icon4"></i><span>Afbalancering af 4 stk. dæk</span></li>
+                  </ul>
+
+                  <div class="price-radio">
+                    <input class="radio js-custom-radio" type="radio" name="price" value="1" id="price3">
+                    <div>
+                      <label for="price3">995,-</label>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
+            <div class="invite">
+              <label>
+                <input type="text" name="invite" class="input" id="input" placeholder="Instast voucher her">
+              </label>
+              <button type="button" class="btn btn--invite">Indløs <i class="icon icon-arrow-right"></i></button>
+            </div>
+
+            <div class="btn-wrp btn-wrp--booing">
+              <button type="button" class="btn btn--form-sm js-nextStrep">Næste <i class="icon icon-arrow-right"></i>
+              </button>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="step-2-formm">
+
+          <div
+            class="ancillary-content-wrp ancillary-content-wrp--booking ancillary-content-wrp--margin-indent ancillary-content-wrp--lg-bottom-indent">
+            <div class="booking-form__content">
+              <div class="step">2/2</div>
+              <div class="booking-form__title">
+                Bil & dæk informationer
+              </div>
+
+              <div class="booking-form__title-2">
+                Hvilken bil skal have dækskifte?
+              </div>
+
+              <label for="register-number"></label>
+              <input type="text" name="register-number" class="input" id="register-number"
+                     placeholder="Intast dit registreringsnummer">
+
+              <label for="state"></label>
+              <select name="state" id="state" class="select-booking">
+                <option disabled selected>Dækstatus</option>
+                <option value="lorem 1">lorem 1</option>
+                <option value="lorem 2">lorem 2</option>
+                <option value="lorem 3">lorem 3</option>
+                <option value="lorem 4">lorem 4</option>
+              </select>
+
+            </div>
+
+          </div>
+
+          <div class="ancillary-content-wrp ancillary-content-wrp--margin-indent">
+            <div class="booking-form__content">
+              <div class="booking-form__title">
+                Bookinginformationer
+              </div>
+
+              <div class="booking-form__title-2">
+                Hvor skal dækskiftet foregå?
+              </div>
+
+              <div class="group-input">
+
+                <div class="form-row">
+                  <label class="col-wr-6">
+                    <input type="text" name="test" class="input" placeholder="Tast postnummer" id="test">
+                  </label>
+
+                  <label class="col-wr-6">
+                    <input type="text" name="by" class="input" placeholder="By" id="by">
+                  </label>
+                </div>
+
+                <label for="address"></label>
+                <input type="text" name="address" class="input" id="address" placeholder="Adresse for dækskifte">
+
+                <div class="form-row">
+                  <label class="col-wr-6">
+                    <input type="text" name="name" class="input" placeholder="Fornavn" id="name">
+                  </label>
+
+                  <label class="col-wr-6">
+                    <input type="text" name="last_name" class="input" placeholder="Efternavn" id="last_name">
+                  </label>
+                </div>
+
+                <div class="form-row">
+                  <label class="col-wr-6">
+                    <input type="text" name="input1" class="input" placeholder="" id="input1">
+                  </label>
+
+                  <label class="col-wr-6">
+                    <input type="text" name="input2" class="input" placeholder="" id="input2">
+                  </label>
+                </div>
+
+              </div>
+
+              <div class="second-pay-adress">
+                <input type="checkbox" name="second_pay_address" value="1" id="second_address">
+                <label for="second_address">Anden fakturerings adresse?</label>
+              </div>
+
+              <div class="group-input hidden-group">
+
+                <div class="form-row">
+                  <label class="col-wr-6">
+                    <input type="text" name="test" class="input" placeholder="Tast postnummer" id="test">
+                  </label>
+
+                  <label class="col-wr-6">
+                    <input type="text" name="by" class="input" placeholder="By" id="by">
+                  </label>
+                </div>
+
+                <label for="address"></label>
+                <input type="text" name="address" class="input" id="address" placeholder="Adresse for dækskifte">
+
+                <div class="form-row">
+                  <label class="col-wr-6">
+                    <input type="text" name="name" class="input" placeholder="Fornavn" id="name">
+                  </label>
+
+                  <label class="col-wr-6">
+                    <input type="text" name="last_name" class="input" placeholder="Efternavn" id="last_name">
+                  </label>
+                </div>
+
+                <div class="form-row">
+                  <label class="col-wr-6">
+                    <input type="text" name="input1" class="input" placeholder="" id="input1">
+                  </label>
+
+                  <label class="col-wr-6">
+                    <input type="text" name="input2" class="input" placeholder="" id="input2">
+                  </label>
+                </div>
+
+              </div>
+
+              <label for="comment"></label>
+              <textarea name="comment" id="comment" class="comment" placeholder="Bemærkninger"></textarea>
+
+              <div class="booking-form__title-2">
+                Hvad skal der ske med dine afmonterede dæk?
+              </div>
+
+              <div class="form-datepicker">
+                <div class="js-open-date-modal">
+                  <input type="text" name="date" class="input form-datepicker__input" id="date-input"
+                         placeholder="Vælg dato og tid" disabled>
+                </div>
+                <div class="date-modal">
+                  <div class="date-modal__picker">
+                    <div id="date-picker"></div>
+                  </div>
+                  <div class="date-modal__time">
+                    <div class="date-modal__time-title">
+                      Ondag d. 10 februar
+                    </div>
+                    <div class="date-modal__time-wrap">
+                      <input type="radio" name="time" id="time-1" class="js-custom-radio radio radio--small">
+                      <label for="time-1">kl. 08.00-12.00</label>
+                    </div>
+                    <div class="date-modal__time-wrap">
+                      <input type="radio" name="time" id="time-2" class="js-custom-radio radio radio--small">
+                      <label for="time-2">kl. 12.00-16.00</label>
+                    </div>
+                    <div class="date-modal__time-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit</div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="btn-wrp">
+            <button class="btn btn--md btn--form">Læg i kurv <i class="icon icon-arrow-right"></i></button>
+          </div>
+        </div>
+      </form>
+
+    </div>
+
+  </section>
+
+  @@include('_include/footer.html')
+  @@include('_include/inc_script.html')
+</div>
+</body>
+</html>
