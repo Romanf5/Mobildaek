@@ -96,7 +96,7 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 }
 .icon-check {
   background-image: url(../images/spritesheet.png);
-  background-position: -328px -241px;
+  background-position: -209px -110px;
   width: 26px;
   height: 20px;
 }
@@ -132,25 +132,25 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 }
 .icon-icon1 {
   background-image: url(../images/spritesheet.png);
-  background-position: -176px -279px;
+  background-position: -264px -279px;
   width: 86px;
   height: 65px;
 }
 .icon-icon2 {
   background-image: url(../images/spritesheet.png);
-  background-position: -88px -279px;
+  background-position: -176px -279px;
   width: 86px;
   height: 65px;
 }
 .icon-icon3 {
   background-image: url(../images/spritesheet.png);
-  background-position: 0px -279px;
+  background-position: -88px -279px;
   width: 86px;
   height: 65px;
 }
 .icon-icon4 {
   background-image: url(../images/spritesheet.png);
-  background-position: -264px -279px;
+  background-position: 0px -279px;
   width: 86px;
   height: 65px;
 }
@@ -166,6 +166,12 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
   width: 93px;
   height: 127px;
 }
+.icon-plus {
+  background-image: url(../images/spritesheet.png);
+  background-position: -328px -241px;
+  width: 25px;
+  height: 25px;
+}
 .icon-snow {
   background-image: url(../images/spritesheet.png);
   background-position: -169px 0px;
@@ -180,7 +186,7 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 }
 .icon-yt {
   background-image: url(../images/spritesheet.png);
-  background-position: -209px -110px;
+  background-position: -237px -110px;
   width: 23px;
   height: 17px;
 }
