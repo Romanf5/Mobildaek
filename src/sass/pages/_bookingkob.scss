@@ -55,25 +55,26 @@
 }
 
 .radio {
+  position: relative;
   width: 34px;
   height: 34px;
   border: 6px solid #cecec8;
   border-radius: 50%;
   background-color: #fff;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  flex-shrink: 0;
   cursor: pointer;
   margin-right: 10px;
+  flex-shrink: 0;
 
   .jq-radio__div{
+    position: absolute;
     width: 16px;
     height: 16px;
     background-color: $brand-color;
     border-radius: 50%;
     visibility: hidden;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
 
   &.checked{
