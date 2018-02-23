@@ -152,29 +152,25 @@ $(document).ready(function () {
   function createFormFields() {
     fieldsCounter++;
 
-    // var tmpl = $('</div>');
-    // var addressInput = $('<input type="text" name="delivery-address-' + fieldsCounter +'" class="input" placeholder="Address">');
-    // var fieldsRow = $('<div class="form-row"></div>');
-    // var fieldCol = $('<label class="col-wr-6"></label>');
-    // var fieldCol2 = fieldCol.clone();
-    // var numberInput = $('<input type="text" name="delivery-postcode-' + fieldsCounter + '" class="input" placeholder="Postnummer">');
-    // var deliveryField = $('<input type="text" name="delivery-by-' + fieldsCounter + '" class="input" placeholder="By">');
-    // tmpl.append(addressInput);
-    // fieldsRow
+    // var formTmpl = '<input type="text" name="delivery-address-' + fieldsCounter + '" class="input" placeholder="Address"> ' +
+    //   '<div class="form-row"> ' +
+    //   '<label class="col-wr-6"> ' +
+    //   '<input type="text" name="delivery-postcode-' + fieldsCounter + '" class="input" placeholder="Postnummer"> ' +
+    //   '</label> ' +
+    //   '<label class="col-wr-6"> ' +
+    //   '<input type="text" name="delivery-by-' + fieldsCounter + '" class="input" placeholder="By"> ' +
+    //   '</label> ' +
+    //   '</div>';
 
-    var formTmpl = '<input type="text" name="delivery-address-' + fieldsCounter + '" class="input" placeholder="Address"> ' +
-      '<div class="form-row"> ' +
-      '<label class="col-wr-6"> ' +
-      '<input type="text" name="delivery-postcode-' + fieldsCounter + '" class="input" placeholder="Postnummer"> ' +
-      '</label> ' +
-      '<label class="col-wr-6"> ' +
-      '<input type="text" name="delivery-by-' + fieldsCounter + '" class="input" placeholder="By"> ' +
-      '</label> ' +
-      '</div>';
-
-    //var tmpWrap = $('</div>');
-    //tmpWrap.html(formTmpl);
-    //console.log(tmpWrap);
+    var formTmpl = '<input type="text" name="register-number-' + fieldsCounter + '" class="input" placeholder="Intast dit registreringsnummer">' +
+      '<select name="state-' + fieldsCounter + '" class="select-booking">' +
+      '<option disabled selected>Dækstatus</option>' +
+      '<option value="lorem 1">lorem 1</option>' +
+      '<option value="lorem 2">lorem 2</option>' +
+      '<option value="lorem 3">lorem 3</option>' +
+      '<option value="lorem 4">lorem 4</option>' +
+      '</select>';
+    
     $('.js-form-fields-output').append($(formTmpl));
   }
 });
