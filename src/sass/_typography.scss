@@ -38,6 +38,18 @@
   url('../fonts/Heebo-Medium.ttf') format('truetype');
 }
 
+// font-family: 'Heebo';
+// font-weight: 400;
+@font-face {
+  font-family: 'Heebo';
+  font-weight: normal;
+  src:  local('Heebo'), local('Heebo');
+  src:  url('../fonts/Heebo-Regular.eot');
+  src:  url('../fonts/Heebo-Regular.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/Heebo-Regular.woff') format('woff'),
+  url('../fonts/Heebo-Regular.ttf') format('truetype');
+}
+
 // font-family: 'MyriadHebrew';
 // font-weight: 400;
 @font-face {

@@ -18,6 +18,9 @@ $(document).ready(function () {
   var selectbooking = $('.select-booking');
   var secondAddressChecek = $('#second_address');
   var nextStepBtn = $('.js-nextStrep');
+  var cardPopup = $('.card-popup');
+  var baskBtn = $('.js-open-bask');
+  var closeBaskBtn = $('.js-close-popup');
 
   initial();
 
@@ -27,6 +30,13 @@ $(document).ready(function () {
     tabControls.on('click', tabHandler);
     activeMenuHandler(itemMenu);
     customSelect();
+    baskBtn.on('click', function () {
+      cardPopup.addClass('show-card');
+    });
+
+    closeBaskBtn.on('click',function () {
+      cardPopup.removeClass('show-card');
+    });
 
     //LightBox Video
     playBtn.poptrox({
@@ -152,16 +162,6 @@ $(document).ready(function () {
   function createFormFields() {
     fieldsCounter++;
 
-    // var tmpl = $('</div>');
-    // var addressInput = $('<input type="text" name="delivery-address-' + fieldsCounter +'" class="input" placeholder="Address">');
-    // var fieldsRow = $('<div class="form-row"></div>');
-    // var fieldCol = $('<label class="col-wr-6"></label>');
-    // var fieldCol2 = fieldCol.clone();
-    // var numberInput = $('<input type="text" name="delivery-postcode-' + fieldsCounter + '" class="input" placeholder="Postnummer">');
-    // var deliveryField = $('<input type="text" name="delivery-by-' + fieldsCounter + '" class="input" placeholder="By">');
-    // tmpl.append(addressInput);
-    // fieldsRow
-
     var formTmpl = '<input type="text" name="delivery-address-' + fieldsCounter + '" class="input" placeholder="Address"> ' +
       '<div class="form-row"> ' +
       '<label class="col-wr-6"> ' +
@@ -172,9 +172,6 @@ $(document).ready(function () {
       '</label> ' +
       '</div>';
 
-    //var tmpWrap = $('</div>');
-    //tmpWrap.html(formTmpl);
-    //console.log(tmpWrap);
     $('.js-form-fields-output').append($(formTmpl));
   }
 });

@@ -1,9 +1,104 @@
 .card-popup{
-  position: absolute;
+  position: fixed;
   right: 0;
   top: 0;
   background-color: $body-bg;
   padding-bottom: 29px;
   max-width: 480px;
   width: 100%;
+  z-index: 1000;
+  font-family: $menu-font;
+  transform: translateX(100%);
+  transition: 0.5s;
+  opacity: 0;
+  visibility: hidden;
+  
+  &:after{
+    content: '';
+    display: block;
+    width: 336px;
+    height: 393px;
+    background: url("../images/card-mark.png")no-repeat;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+}
+
+.checkout-info{
+  padding:40px 40px 230px 40px;
+  background-color: $brand-color;
+
+  &__inner{
+    border-bottom: 2px solid rgba(255,255,255,0.6);
+    margin-bottom: 20px;
+  }
+
+  &__title{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    >span{
+      font-family: $title-font;
+      font-size: 46px;
+      font-weight: 700;
+      line-height: 74.83px;
+      text-transform: uppercase;
+    }
+
+    >i{
+      cursor: pointer;
+    }
+  }
+
+  &__description{
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 0.34px;
+    margin-top: 26px;
+  }
+}
+
+.added-item{
+
+  &:last-of-type{
+    .checkout-info__inner{
+      margin-bottom: 0;
+    }
+  }
+
+  &__title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 24px;
+    font-weight: 500;
+
+    &--total{
+      margin-bottom: 20px;
+    }
+  }
+
+  &__description{
+    max-width: 200px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20.55px;
+    margin-bottom: 25px;
+    margin-top: 5px;
+  }
+}
+
+.attention{
+  font-family: $menu-font;
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0.34px;
+}
+
+.show-card{
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(0);
 }
