@@ -7,6 +7,14 @@
   left: 50%;
   transform: translateX(-50%);
   z-index: 99;
+
+  @include max-w($screen-xl){
+    max-width: 600px;
+  }
+
+  @include max-w($screen-lg){
+    max-width: 500px;
+  }
 }
 
 .tabs-content-box {
@@ -14,6 +22,11 @@
   padding-bottom: 34px;
   padding-top: 40px;
   box-shadow: 0 0 18px rgba(0, 0, 0, 0.15);
+
+  @include max-w($screen-lg){
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
 }
 
 .tab-content-tab-title {
@@ -45,6 +58,18 @@
       padding-bottom: 10px;
       box-shadow: inset 0 0 18px rgba(0, 0, 0, 0.15);
       transition: 0.5s;
+
+      @include max-w($screen-xxl){
+        font-size: 28px;
+      }
+
+      @include max-w($screen-1440){
+        font-size: 25px;
+      }
+
+      @include max-w($screen-lg){
+        font-size: 20px;
+      }
 
       &.active-tab {
         background-color: $body-bg;

@@ -12,6 +12,8 @@
   transition: 0.5s;
   opacity: 0;
   visibility: hidden;
+  max-height: 100vh;
+  overflow: auto;
   
   &:after{
     content: '';

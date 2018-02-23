@@ -39,6 +39,16 @@
   color: #fff;
   transition: 0.5s;
 
+  @include max-w($screen-1440){
+    width: 290px;
+  }
+
+  @include max-w($screen-lg){
+    padding: 22px 0;
+    font-size: 20px;
+    width: 250px;
+  }
+
   &:hover {
     background-color: darken($brand-color, 5%);
   }
@@ -63,6 +73,34 @@
     width: 225px;
     font-size: 20px;
     font-family: $menu-font;
+
+    @include max-w($screen-1440){
+      width: 215px;
+    }
+
+    @include max-w($screen-xl){
+      width: 200px;
+      font-size: 17px;
+
+      >.icon-arrow-right{
+        right: 20px;
+
+      }
+    }
+
+    @include max-w($screen-lg){
+      width: 30px;
+      background-color: inherit;
+
+      &:hover{
+        background-color: inherit;
+      }
+      >.icon-arrow-right,
+      >.price,
+      >.kurv{
+        display: none;
+      }
+    }
   }
 
   &--md{
@@ -177,6 +215,35 @@
     font-family: $menu-font;
     font-size: 24px;
     font-weight: 700;
+  }
+}
 
+
+.btn-hamburger{
+  background-color: transparent;
+  outline: none;
+  border: none;
+  width: 40px;
+  padding: 5px 5px;
+  margin-right: 15px;
+  display: none;
+
+  &__item{
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: #fff;
+    margin-bottom: 5px;
+  }
+
+  @include max-w($screen-lg){
+    display: block;
+  }
+}
+
+.youtube-btn{
+  transition: 0.5s;
+  &:hover{
+    color: $dark-color;
   }
 }

@@ -1,13 +1,49 @@
-.main-nav{
+.header-nav {
+
+  @include max-w($screen-lg) {
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: $dark-color;
+    padding-top: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 30px;
+    height: 100vh;
+    width: 300px;
+    transform: translateX(-100%);
+  }
+}
+
+.main-nav {
   @include clearlist();
   margin-right: 25px;
 
-  &__item{
+  @include max-w($screen-1440) {
+    margin-right: 15px;
+  }
+
+  &__item {
     display: inline-block;
     margin-left: 15px;
     margin-right: 15px;
 
-    >a{
+    @include max-w($screen-1440) {
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+
+    @include max-w($screen-xl) {
+      margin-left: 5px;
+      margin-right: 5px;
+    }
+
+    @include max-w($screen-lg){
+      display: block;
+      margin-bottom: 20px;
+    }
+
+    > a {
       display: inline-block;
       font-family: $menu-font;
       font-size: 16px;
@@ -15,8 +51,16 @@
       letter-spacing: 0.45px;
       transition: 0.5s;
 
+      @include max-w($screen-xl) {
+        font-size: 14px;
+      }
+
+      @include max-w($screen-lg){
+        font-size: 20px;
+      }
+
       &:hover,
-      &.current-page{
+      &.current-page {
         color: $decoration-text-color;
       }
     }

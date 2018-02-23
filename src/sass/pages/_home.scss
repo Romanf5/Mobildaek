@@ -1,14 +1,18 @@
 .preview-section {
   padding-bottom: 80px;
 
-  &--home{
+  @include max-w($screen-lg) {
+    padding-bottom: 55px;
+  }
+
+  &--home {
     padding-top: 80px;
   }
 
-  &--daek{
+  &--daek {
     padding-top: 75px;
 
-    .title-wrp{
+    .title-wrp {
       position: relative;
       max-width: 1634px;
     }
@@ -21,7 +25,17 @@
   padding-top: 110px;
   background-color: $second-color;
 
-  &:before{
+  @include max-w($screen-xl) {
+    padding-top: 90px;
+    padding-bottom: 80px;
+  }
+
+  @include max-w($screen-lg) {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  &:before {
     position: absolute;
     right: 0;
     top: -100px;
@@ -30,9 +44,13 @@
     width: 606px;
     height: 966px;
     background: url('../images/bg-marker.png') no-repeat;
+
+    @include max-w($screen-lg) {
+      display: none;
+    }
   }
 
-  &:after{
+  &:after {
     overflow: hidden;
     position: absolute;
     left: 0;
@@ -42,10 +60,14 @@
     width: 261px;
     height: 721px;
     background: url('../images/bg-marker-2.png') no-repeat 100%;
+
+    @include max-w($screen-lg) {
+      display: none;
+    }
   }
 
-  &--ceo{
-    &:after{
+  &--ceo {
+    &:after {
       overflow: hidden;
       position: absolute;
       left: 0;
@@ -58,22 +80,22 @@
     }
   }
 
-  &--erhversaftale{
+  &--erhversaftale {
     overflow: hidden;
     padding-top: 129px;
     padding-bottom: 65px;
   }
 
-  &--prismatch{
+  &--prismatch {
     padding-top: 129px;
     padding-bottom: 185px;
   }
 
-  &--daekskfite{
+  &--daekskfite {
     padding-top: 129px;
     padding-bottom: 100px;
 
-    &:after{
+    &:after {
       overflow: hidden;
       position: absolute;
       left: 0;
@@ -85,7 +107,7 @@
       background: url('../images/lg-ns.png') no-repeat 100% 0;
     }
 
-    &:before{
+    &:before {
       position: absolute;
       right: 0;
       top: -150px;
@@ -97,9 +119,9 @@
     }
   }
 
-  &--daekside{
+  &--daekside {
 
-    .title{
+    .title {
       text-align: center;
       font-size: 46px;
       font-weight: 700;
@@ -109,7 +131,7 @@
       margin-bottom: 60px;
     }
 
-    &:before{
+    &:before {
       display: none;
     }
 
@@ -129,6 +151,11 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: stretch;
+
+    @include max-w($screen-lg) {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
   }
 
   &__item {
@@ -136,15 +163,47 @@
     padding-left: 15px;
     padding-right: 15px;
 
+    @include max-w($screen-lg) {
+      width: 80%;
+
+      &:first-of-type {
+        margin-bottom: 20px;
+      }
+    }
+
     .title-item {
       font-size: 48px;
       margin-bottom: 25px;
+
+      @include max-w($screen-xxl) {
+        font-size: 45px;
+      }
+
+      @include max-w($screen-xl) {
+        font-size: 40px;
+      }
+
+      @include max-w($screen-lg) {
+        font-size: 35px;
+      }
     }
 
     .description-item {
       font-size: 25px;
       line-height: 33.08px;
       max-width: 383px;
+
+      @include max-w($screen-xxl) {
+        font-size: 22px;
+      }
+
+      @include max-w($screen-xl) {
+        font-size: 20px;
+      }
+
+      @include max-w($screen-xl){
+        font-size: 18px;
+      }
     }
 
     .blue-item,
@@ -154,6 +213,10 @@
       padding-left: 30px;
       padding-right: 30px;
       min-height: 578px;
+
+      @include max-w($screen-lg) {
+        min-height: 510px;
+      }
     }
 
     .blue-item {
@@ -171,6 +234,10 @@
       right: 0;
       bottom: -100px;
       margin: auto;
+
+      @include max-w($screen-xl) {
+        max-width: 365px;
+      }
     }
 
     .img-price-wrp {
@@ -198,36 +265,94 @@
   }
 }
 
-.car-section{
+.car-section {
   text-align: center;
   padding-top: 100px;
   padding-bottom: 80px;
   background: url('../images/bg-car.png') no-repeat center/cover;
 
-  .title-section{
+  @include max-w($screen-xxl) {
+    padding-top: 80px;
+  }
+
+  @include max-w($screen-xxl) {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  .title-section {
     font-size: 89px;
     color: $decoration-text-color;
     line-height: 78.52px;
     font-weight: 400;
     text-transform: none;
     margin-bottom: 45px;
+
+    @include max-w($screen-xxl) {
+      font-size: 70px;
+      margin-bottom: 35px;
+    }
+
+    @include max-w($screen-1440) {
+      font-size: 60px;
+      line-height: 65px;
+      margin-bottom: 30px;
+    }
+
+    @include max-w($screen-xl) {
+      font-size: 50px;
+      line-height: 55px;
+      margin-bottom: 25px;
+    }
+
+    @include max-w($screen-lg) {
+      font-size: 45px;
+      line-height: 50px;
+      margin-bottom: 20px;
+    }
   }
 
-  .description-section{
+  .description-section {
     text-transform: uppercase;
     color: $dark-color;
     font-size: 68px;
     font-family: $title-font;
     font-weight: 700;
     margin-bottom: 117px;
+
+    @include max-w($screen-xxl) {
+      font-size: 60px;
+    }
+
+    @include max-w($screen-1440) {
+      font-size: 55px;
+      margin-bottom: 70px;
+    }
+
+    @include max-w($screen-xl) {
+      font-size: 50px;
+      margin-bottom: 60px;
+
+    }
+
+    @include max-w($screen-lg) {
+      font-size: 40px;
+      margin-bottom: 50px;
+
+    }
+
   }
 }
 
-.wrapper-car{
+.wrapper-car {
   max-width: 688px;
   margin: 0 auto 25px;
 
-  img{
+  @include max-w($screen-xl) {
+    max-width: 500px;
+  }
+
+  img {
     width: 100%;
   }
 }
@@ -243,7 +368,7 @@
   max-width: 845px;
   margin: 0 auto;
 
-  &--lg{
+  &--lg {
     max-width: 1220px;
     margin-top: 88px;
   }
@@ -254,4 +379,20 @@
   text-transform: uppercase;
   text-align: center;
   color: #002d4e;
+
+  @include max-w($screen-xxl) {
+    font-size: 42px;
+  }
+
+  @include max-w($screen-1440) {
+    font-size: 38px;
+  }
+
+  @include max-w($screen-xl) {
+    font-size: 33px;
+  }
+
+  @include max-w($screen-lg) {
+    font-size: 30px;
+  }
 }

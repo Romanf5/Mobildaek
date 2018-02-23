@@ -7,6 +7,20 @@
   padding-bottom: 356px;
   padding-left: 239px;
 
+  @include max-w($screen-1440){
+    max-height: 720px;
+    min-height: inherit;
+  }
+
+  @include max-w($screen-xl){
+    max-height: 500px;
+  }
+
+  @include max-w($screen-lg){
+    padding-top: 280px;
+    padding-left: 40px;
+  }
+
   .img-banner-wrp {
     position: absolute;
     img {
@@ -40,6 +54,22 @@
     position: relative;
     font-size: 64px;
     z-index: 10;
+
+    @include max-w($screen-xxl){
+      font-size: 60px;
+    }
+
+    @include max-w($screen-1440){
+      font-size: 55px;
+    }
+
+    @include max-w($screen-xl){
+      font-size: 50px;
+    }
+
+    @include max-w($screen-lg){
+      font-size: 45px;
+    }
   }
 
   &--2 {
