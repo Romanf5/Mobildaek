@@ -21,6 +21,8 @@ $(document).ready(function () {
   var cardPopup = $('.card-popup');
   var baskBtn = $('.js-open-bask');
   var closeBaskBtn = $('.js-close-popup');
+  var btnHamburger = $('.btn-hamburger');
+  var menu = $('.header-nav');
 
   initial();
 
@@ -34,7 +36,17 @@ $(document).ready(function () {
       cardPopup.addClass('show-card');
     });
 
-    closeBaskBtn.on('click',function () {
+    btnHamburger.on('click', function () {
+      if (menu.hasClass('active-menu')) {
+        $(this).removeClass('active-burger');
+        menu.removeClass('active-menu');
+      } else {
+        $(this).addClass('active-burger');
+        menu.addClass('active-menu');
+      }
+    });
+
+    closeBaskBtn.on('click', function () {
       cardPopup.removeClass('show-card');
     });
 
@@ -81,7 +93,7 @@ $(document).ready(function () {
   function activeMenuHandler(items) {
     items.each(function (index, item) {
       var itemElement = $(item);
-      if(itemElement.prop('href') === window.location.href){
+      if (itemElement.prop('href') === window.location.href) {
         itemElement.addClass('current-page');
       }
     })
@@ -105,9 +117,9 @@ $(document).ready(function () {
   }
 
   //Show second address
-  function showAddress(){
+  function showAddress() {
     var hiddenGroup = $('.hidden-group');
-    $(this).prop("checked") ? hiddenGroup.css('display','block') : hiddenGroup.removeAttr('style');
+    $(this).prop("checked") ? hiddenGroup.css('display', 'block') : hiddenGroup.removeAttr('style');
   };
 
   //Show Step
@@ -155,7 +167,7 @@ $(document).ready(function () {
 
   // add form fields
   var fieldsCounter = 1;
-  $('.added-btn').on('click', function(e) {
+  $('.added-btn').on('click', function (e) {
     createFormFields();
   });
 

@@ -135,5 +135,8 @@ section {
 
 .poptrox-popup{
   min-width: 80% !important;
+}
 
+.header-nav.active-menu{
+  transform: translateX(0);
 }

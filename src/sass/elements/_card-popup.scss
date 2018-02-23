@@ -24,12 +24,20 @@
     position: absolute;
     left: 0;
     top: 0;
+
+    @include max-w($screen-sm){
+      display: none;
+    }
   }
 }
 
 .checkout-info{
   padding:40px 40px 230px 40px;
   background-color: $brand-color;
+
+  @include max-w($screen-sm){
+    padding: 15px;
+}
 
   &__inner{
     border-bottom: 2px solid rgba(255,255,255,0.6);

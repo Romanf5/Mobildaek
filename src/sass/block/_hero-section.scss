@@ -21,6 +21,11 @@
     padding-left: 40px;
   }
 
+  @include max-w($screen-sm){
+    padding-top: 140px;
+    padding-bottom: 240px;
+  }
+
   .img-banner-wrp {
     position: absolute;
     img {
@@ -48,6 +53,11 @@
     background: url('../images/banner-man.png') no-repeat right;
     bottom: 0;
     right: 0;
+
+    @include max-w($screen-sm){
+      background: url('../images/banner-man.png') no-repeat bottom right;
+      background-size: 70%;
+    }
   }
 
   &__title {
@@ -69,6 +79,10 @@
 
     @include max-w($screen-lg){
       font-size: 45px;
+    }
+
+    @include max-w($screen-sm){
+      font-size: 35px;
     }
   }
 

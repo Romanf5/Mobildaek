@@ -36,8 +36,8 @@ $container-width: 1170px + $container-padding * 2;*/
 //  Адаптивность и соответствующие ширины контейнера
 
 // $screen-xs: 0;
-// $screen-sm: 480px;
-// $screen-md: 767px;
+$screen-sm: 480px;
+$screen-md: 767px;
 $screen-lg: 992px;
 $screen-xl: 1200px;
 $screen-1440: 1440px;

@@ -2,6 +2,11 @@
   position: relative;
   padding-top: 78px;
   padding-bottom: 70px;
+
+  @include max-w($screen-lg){
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
 }
 
 .footer-content {
@@ -14,11 +19,26 @@
 .footer-logo {
   max-width: 310px;
   margin: 0 auto 21px;
+
+  @include max-w($screen-lg){
+    max-width: 200px;
+  }
 }
 
 .contact-info{
   @include clearlist;
   margin-bottom: 52px;
+
+  @include max-w($screen-lg){
+    margin-bottom: 30px;
+  }
+
+  @include max-w($screen-md){
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
 
   >li{
     display: inline-block;
@@ -29,11 +49,35 @@
     padding-left: 10px;
     padding-right: 10px;
 
+    @include max-w($screen-lg){
+      padding-left: 5px;
+      padding-right: 5px;
+      font-size: 14px;
+
+      &:last-of-type{
+        padding-right: 0;
+      }
+    }
+
+    @include max-w($screen-md){
+      padding-left: 5px;
+      padding-right: 5px;
+      margin-bottom: 10px;
+    }
+
+
     &:first-of-type{
       padding-left: 0;
+
       >span{
         padding-left: 10px;
         padding-right: 10px;
+
+        @include max-w($screen-lg){
+          padding-left: 5px;
+          padding-right: 5px;
+        }
+
         &:first-of-type{
           padding-left: 0;
         }
