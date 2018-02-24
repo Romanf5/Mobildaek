@@ -1,7 +1,7 @@
 .filter-wrp {
   position: absolute;
   left: 50%;
-  bottom: -70px;
+  bottom: -90px;
   transform: translateX(-50%);
   max-width: 1664px;
   padding-left: 15px;
@@ -13,7 +13,28 @@
   background-color: $body-bg;
   z-index: 10;
 
-  .title-filter{
+  @include max-w($screen-1440){
+    bottom: -75px;
+  }
+
+  @include max-w($screen-lg) {
+    position: fixed;
+    top: 0;
+    max-height: 100vh;
+    width: 50vw;
+    z-index: 1000;
+    right: 0;
+    left: 0;
+    transform: translateX(-100%);
+    overflow: auto;
+    transition: 0.5s;
+  }
+
+  @include max-w($screen-md) {
+    width: 100vw;
+  }
+
+  .title-filter {
     font-family: $title-font;
     font-size: 28px;
     text-transform: uppercase;
@@ -43,6 +64,11 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: stretch;
+
+  @include max-w($screen-lg) {
+    flex-direction: column;
+  }
+
 }
 
 .first-group {
@@ -54,21 +80,37 @@
   flex-direction: row;
   margin: 0 -15px;
 
-  &:after{
+  @include max-w($screen-lg) {
+    flex-direction: column;
+    max-width: 100%;
+    margin: 0;
+  }
+
+  &:after {
     position: absolute;
     content: '';
     display: block;
     width: 631px;
     height: 140px;
-    background: url('../images/wheel.png') no-repeat ;
+    background: url('../images/wheel.png') no-repeat;
     top: 54%;
     left: -107px;
+
+    @include max-w($screen-lg) {
+      display: none;
+    }
   }
 
   > div {
     width: 33.33%;
     padding-left: 15px;
     padding-right: 15px;
+
+    @include max-w($screen-lg){
+      width: 100%;
+      padding: 0;
+      margin-bottom: 15px;
+    }
   }
 }
 
@@ -76,14 +118,31 @@
   max-width: 760px;
   width: 100%;
 
+  @include max-w($screen-xl) {
+    max-width: 490px;
+  }
+
+  @include max-w($screen-md){
+    max-width: 100%;
+  }
+
   .row {
     display: flex;
     margin: 0 -15px;
+
+    @include max-w($screen-md){
+      flex-wrap: wrap;
+    }
 
     > div {
       width: 50%;
       padding-left: 15px;
       padding-right: 15px;
+
+      @include max-w($screen-md){
+        width: 100%;
+        margin-bottom: 20px;
+      }
     }
 
     &.first-row {
@@ -99,6 +158,7 @@
   font-size: 16px;
   color: #a6a6a2;
 
+
   .jq-selectbox__select {
     padding: 23px 19px 23px 17px;
     display: inline-flex;
@@ -107,7 +167,7 @@
     width: 100%;
   }
 
-  .jq-selectbox__select-text{
+  .jq-selectbox__select-text {
     font-weight: 500;
     font-family: $menu-font;
   }
@@ -144,10 +204,10 @@
           background: darken(#ecece7, 10%);
         }
 
-        &.disabled{
+        &.disabled {
           background: darken(#ecece7, 10%);
 
-          &:hover{
+          &:hover {
             color: #a6a6a2;
           }
         }
@@ -156,61 +216,84 @@
   }
 }
 
-.dots{
+.dots {
   position: relative;
 
-  &:after{
+  &:after {
     content: '';
     position: absolute;
     z-index: 5;
   }
 
-  &--left{
-    &:after{
+  &--left {
+    &:after {
       top: 45%;
       left: 50px;
       width: 49px;
       height: 128px;
       background: url('../images/dl.png') no-repeat;
+
+      @include max-w($screen-lg) {
+        display: none;
+      }
     }
   }
 
-  &--center{
-    &:after{
+  &--center {
+    &:after {
       top: 45%;
       left: 70px;
       width: 7px;
       height: 64px;
       background: url('../images/dc.png') no-repeat;
+
+      @include max-w($screen-lg) {
+        display: none;
+      }
     }
   }
 
-  &--right{
-    &:after{
+  &--right {
+    &:after {
       top: 45%;
       right: 50px;
       width: 58px;
       height: 132px;
       background: url('../images/dr.png') no-repeat;
+
+      @include max-w($screen-lg) {
+        display: none;
+      }
     }
   }
 }
 
 //Sort select
 
-.sort{
+.sort {
   width: 278px;
   position: absolute;
-  right: 0;
+  right: -7px;
   bottom: 0;
 
-  .jq-selectbox__select{
+  @include max-w($screen-xl) {
+    position: relative;
+    z-index: 99;
+    margin: 0 auto;
+    right: 0;
+  }
 
-    .jq-selectbox__select-text{
+  .jq-selectbox__select {
+
+    .jq-selectbox__select-text {
       font-weight: 700;
       font-size: 24px;
       font-family: $menu-font;
     }
   }
 
+}
+
+.show-filter{
+  transform: translateX(0);
 }

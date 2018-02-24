@@ -7,23 +7,24 @@
   padding-bottom: 356px;
   padding-left: 239px;
 
-  @include max-w($screen-1440){
+  @include max-w($screen-1440) {
     max-height: 720px;
     min-height: inherit;
   }
 
-  @include max-w($screen-xl){
+  @include max-w($screen-xl) {
     max-height: 500px;
   }
 
-  @include max-w($screen-lg){
+  @include max-w($screen-lg) {
     padding-top: 280px;
     padding-left: 40px;
   }
 
-  @include max-w($screen-sm){
+  @include max-w($screen-sm) {
     padding-top: 140px;
     padding-bottom: 240px;
+    padding-left: 15px;
   }
 
   .img-banner-wrp {
@@ -54,7 +55,7 @@
     bottom: 0;
     right: 0;
 
-    @include max-w($screen-sm){
+    @include max-w($screen-sm) {
       background: url('../images/banner-man.png') no-repeat bottom right;
       background-size: 70%;
     }
@@ -65,41 +66,72 @@
     font-size: 64px;
     z-index: 10;
 
-    @include max-w($screen-xxl){
+    @include max-w($screen-xxl) {
       font-size: 60px;
     }
 
-    @include max-w($screen-1440){
+    @include max-w($screen-1440) {
       font-size: 55px;
     }
 
-    @include max-w($screen-xl){
+    @include max-w($screen-xl) {
       font-size: 50px;
     }
 
-    @include max-w($screen-lg){
+    @include max-w($screen-lg) {
       font-size: 45px;
     }
 
-    @include max-w($screen-sm){
+    @include max-w($screen-sm) {
       font-size: 35px;
     }
   }
 
   &--2 {
     background: url('../images/bg-banner.png') no-repeat center/cover;
+
+    @include max-w($screen-xl){
+      padding-top: 240px;
+    }
+
+    @include max-w($screen-lg){
+      padding-top: 200px;
+    }
+
+    @include max-w($screen-sm){
+      padding-top: 110px;
+    }
+
+    @include max-w($screen-sm) {
+      padding-bottom: 190px;
+    }
+
     .img-banner-wrp {
       max-width: 1920px;
       z-index: 3;
       right: 15%;
       left: auto;
       bottom: 0;
+
+      @include max-w($screen-xl){
+        max-width: 750px;
+      }
+
+      @include max-w($screen-sm) {
+        max-width: 740px;
+        width: 100%;
+        right: 0;
+      }
     }
 
     &:after {
       width: 421px;
       height: 268px;
       background: url('../images/pin-2.png') no-repeat left;
+
+      @include max-w($screen-sm){
+        display: none;
+      }
     }
 
     &:before {
@@ -108,35 +140,77 @@
       background: url('../images/blue-2.png') no-repeat right;
       bottom: 0;
       right: 0;
+
+      @include max-w($screen-xl){
+        background: url('../images/blue-2.png') no-repeat right bottom;
+        background-size: 70%;
+      }
+
     }
   }
 
   &--3 {
     background: url('../images/bg-banner4.png') no-repeat center/cover;
 
+    @include max-w($screen-lg) {
+      padding-top: 180px;
+    }
+
+    @include max-w($screen-md) {
+      padding-top: 180px;
+    }
+
+    @include max-w($screen-sm) {
+      padding-top: 130px;
+      padding-bottom: 190px;
+    }
     .img-banner-wrp {
       max-width: 602px;
       z-index: 3;
       left: 50%;
       bottom: 0;
       transform: translateX(-50%);
+
+      @include max-w($screen-md) {
+        width: 75%;
+      }
     }
 
     &:after {
       width: 212px;
       height: 510px;
       background: url('../images/pin-3.png') no-repeat left;
+
+      @include max-w($screen-md) {
+        display: none;
+      }
     }
 
     &:before {
       width: 330px;
       height: 429px;
       background: url('../images/blue-3.png') no-repeat right;
+
+      @include max-w($screen-md) {
+        display: none;
+      }
     }
   }
 
   &--4 {
     background: url('../images/bg-banner-5.png') no-repeat center/cover;
+
+    @include max-w($screen-xl){
+      padding-top: 240px;
+    }
+
+    @include max-w($screen-lg){
+      padding-top: 150px;
+    }
+
+    @include max-w($screen-sm){
+      padding-bottom: 115px;
+    }
 
     &:before {
       display: none;
@@ -146,11 +220,20 @@
       width: 350px;
       height: 241px;
       background: url('../images/pin-4.png') no-repeat left;
+
+      @include max-w($screen-lg){
+        display: none;
+      }
     }
   }
 
   &--5 {
     background: url('../images/bg-banner-5-1.png') no-repeat center/cover;
+
+    @include max-w($screen-md){
+      padding-bottom: 110px;
+    }
+
     &:before {
       display: none;
     }
@@ -159,11 +242,27 @@
       width: 335px;
       height: 388px;
       background: url('../images/blue-5.png') no-repeat left;
+
+      @include max-w($screen-lg){
+        display: none;
+      }
     }
   }
 
   &--6 {
     background: url('../images/bg-banner-6.png') no-repeat center/cover;
+
+    @include max-w($screen-xl){
+      padding-top: 260px;
+      padding-bottom: 300px;
+    }
+
+    @include max-w($screen-md){
+      padding-top: 180px;
+      padding-bottom: 225px;
+      max-height: 400px;
+    }
+
     &:before {
       display: none;
     }
@@ -174,6 +273,15 @@
       width: 200px;
       height: 607px;
       background: url('../images/pin-6.png') no-repeat left;
+
+      @include max-w($screen-xl){
+        background: url('../images/pin-6.png') no-repeat left center;
+        background-size: 70%;
+      }
+
+      @include max-w($screen-md) {
+        display: none;
+      }
     }
   }
 
@@ -183,16 +291,39 @@
     background: $dark-color;
     padding-bottom: 0;
 
+    @include max-w($screen-xl){
+      padding-left: 110px;
+    }
+
+    @include max-w($screen-lg){
+      min-height: 440px;
+      padding-left: 15px;
+    }
+
+    @include max-w($screen-md){
+      min-height: 350px;
+      padding-top: 100px;
+    }
+
     &:after {
       width: 285px;
       height: 465px;
       background: url('../images/bg-ns.png') no-repeat left top;
+
+      @include max-w($screen-lg){
+        display: none;
+      }
     }
 
     &:before {
       width: 836px;
       height: 514px;
       background: url('../images/big-m.png') no-repeat right top;
+
+      @include max-w($screen-md){
+        background: url('../images/big-m.png') no-repeat right top;
+        background-size: 50%;
+      }
     }
 
     .banner-container {
@@ -200,9 +331,22 @@
       margin: 0 auto;
       padding: 0 15px;
 
+      @include max-w($screen-lg){
+        padding: 0;
+        max-width: 100%;
+
+      }
+
       .text-content {
         max-width: 795px;
         padding-left: 40px;
+        position: relative;
+
+        @include max-w($screen-lg){
+          padding: 0;
+          max-width: 100%;
+
+        }
       }
 
       .title {
@@ -221,12 +365,20 @@
     }
   }
 
-  &--sm{
+  &--sm {
     padding: 0;
     min-height: 155px;
     background: url("../images/sm-banner.png") no-repeat center/cover;
+
+    @include max-w($screen-1440){
+      background: $dark-color;
+    }
+
+    @include max-w($screen-sm){
+      min-height: 100px;
+    }
     &:after,
-    &:before{
+    &:before {
       display: none;
     }
   }

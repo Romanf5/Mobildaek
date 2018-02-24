@@ -16,6 +16,15 @@
   &--daek {
     padding-top: 75px;
 
+    @include max-w($screen-xl){
+      padding-top: 40px;
+      padding-bottom: 40px;
+    }
+
+    @include max-w($screen-lg){
+      padding-top: 0;
+    }
+
     .title-wrp {
       position: relative;
       max-width: 1634px;
@@ -88,16 +97,51 @@
     overflow: hidden;
     padding-top: 129px;
     padding-bottom: 65px;
+
+    @include max-w($screen-xxl) {
+      padding-top: 90px;
+    }
+
+    @include max-w($screen-lg) {
+      padding-top: 50px;
+    }
   }
 
   &--prismatch {
     padding-top: 129px;
     padding-bottom: 185px;
+
+    @include max-w($screen-xl) {
+      padding-top: 100px;
+      padding-bottom: 100px;
+      overflow: hidden;
+    }
+
+    @include max-w($screen-lg){
+      padding-top: 70px;
+      padding-bottom: 70px;
+    }
+
+    &:before{
+      @include max-w($screen-xl){
+        display: none;
+      }
+    }
   }
 
   &--daekskfite {
     padding-top: 129px;
     padding-bottom: 100px;
+
+    @include max-w($screen-1440) {
+      padding-top: 90px;
+      padding-bottom: 90px;
+    }
+
+    @include max-w($screen-md){
+      padding-top: 50px;
+      padding-bottom: 50px;
+    }
 
     &:after {
       overflow: hidden;
@@ -109,6 +153,10 @@
       width: 570px;
       height: 698px;
       background: url('../images/lg-ns.png') no-repeat 100% 0;
+
+      @include max-w($screen-xl) {
+        display: none;
+      }
     }
 
     &:before {
@@ -120,6 +168,14 @@
       width: 523px;
       height: 721px;
       background: url('../images/sm-ns.png') no-repeat right;
+
+      @include max-w($screen-xl) {
+        top: -120px;
+      }
+
+      @include max-w($screen-lg){
+        display: none;
+      }
     }
   }
 
@@ -133,6 +189,11 @@
       font-family: $title-font;
       color: $decoration-text-color;
       margin-bottom: 60px;
+
+      @include max-w($screen-lg){
+        font-size: 40px;
+        margin-bottom: 30px;
+      }
     }
 
     &:before {
@@ -176,7 +237,7 @@
 
     }
 
-    @include max-w($screen-md){
+    @include max-w($screen-md) {
       width: 100%;
     }
 
@@ -210,7 +271,7 @@
         font-size: 20px;
       }
 
-      @include max-w($screen-xl){
+      @include max-w($screen-xl) {
         font-size: 18px;
       }
     }
@@ -374,7 +435,7 @@
     max-width: 500px;
   }
 
-  @include max-w($screen-md){
+  @include max-w($screen-md) {
     max-width: 250px;
   }
 
@@ -397,6 +458,10 @@
   &--lg {
     max-width: 1220px;
     margin-top: 88px;
+
+    @include max-w($screen-md) {
+      margin-top: 60px;
+    }
   }
 }
 
@@ -422,14 +487,13 @@
     font-size: 30px;
   }
 
-  @include max-w($screen-sm){
+  @include max-w($screen-sm) {
     font-size: 24px;
     padding: 0 15px;
   }
 }
 
-
-.weather-icon{
+.weather-icon {
   @include max-w($screen-sm) {
     display: none;
   }

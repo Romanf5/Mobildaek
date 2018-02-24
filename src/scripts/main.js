@@ -23,6 +23,10 @@ $(document).ready(function () {
   var closeBaskBtn = $('.js-close-popup');
   var btnHamburger = $('.btn-hamburger');
   var menu = $('.header-nav');
+  var body = $('body');
+  var filterBtn = $('.filter-mobile-btn');
+  var filter = $('.filter-wrp');
+  var aplayFilter = $('.js-filter-btn');
 
   initial();
 
@@ -40,10 +44,39 @@ $(document).ready(function () {
       if (menu.hasClass('active-menu')) {
         $(this).removeClass('active-burger');
         menu.removeClass('active-menu');
+        $('body').removeAttr('style');
       } else {
         $(this).addClass('active-burger');
         menu.addClass('active-menu');
+        $('body').css('overflow','hidden')
       }
+    });
+
+    $(window).on('load resize', function () {
+      var windowWidth = $(this).width();
+      if(windowWidth > 992){
+        btnHamburger.removeClass('active-burger');
+        menu.removeClass('active-menu');
+        $('body').removeAttr('style');
+        filterBtn.removeAttr('style');
+        filter.removeClass('show-filter');
+      }
+
+      if(body.hasClass('has-filter') && windowWidth<=992){
+        filterBtn.css('display','block')
+      }
+    });
+
+    filterBtn.on('click', function () {
+      if(filter.hasClass('show-filter')){
+        filter.removeClass('show-filter');
+      }else {
+        filter.addClass('show-filter');
+      }
+    });
+
+    aplayFilter.on('click', function () {
+      filter.removeClass('show-filter');
     });
 
     closeBaskBtn.on('click', function () {
@@ -75,14 +108,14 @@ $(document).ready(function () {
     var targetItemDataTab = $(event.target).attr('data-tab-control');
 
     if (!$(this).hasClass('active-tab')) {
-      tabContent.fadeOut(300);
+      tabContent.removeClass('active-content');
       targetItem.addClass('active-tab');
       tabControls.not(this).removeClass('active-tab');
 
       tabContent.each(function (index, element) {
         var elementItem = $(element);
         if (targetItemDataTab === elementItem.attr('data-tab-index')) {
-          elementItem.delay(300).fadeIn(300);
+          elementItem.addClass('active-content');
         }
       });
       event.preventDefault();

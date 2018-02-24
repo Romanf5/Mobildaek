@@ -16,6 +16,18 @@
     font-weight: 700;
     color: $brand-color;
     margin-bottom: 5px;
+
+    @include max-w($screen-lg){
+      font-size: 35px;
+    }
+
+    @include max-w($screen-md){
+      font-size: 30px;
+    }
+
+    @include max-w($screen-sm) {
+      font-size: 20px;
+    }
   }
 
   &__title-2{
@@ -25,6 +37,15 @@
     color: $dark-color;
     letter-spacing: 0.78px;
     line-height: 64.55px;
+
+    @include max-w($screen-lg){
+      line-height: 34px;
+    }
+
+    @include max-w($screen-md){
+      font-size: 20px;
+      line-height: 25px;
+    }
   }
 }
 
@@ -33,11 +54,22 @@
   margin: 35px auto 0 ;
   display: flex;
   align-items: stretch;
-
+  @include max-w($screen-md){
+    flex-wrap: wrap;
+  }
 
   &__item{
     width: 50%;
     display: flex;
+
+    @include max-w($screen-md){
+      width: 100%;
+      margin-bottom: 10px;
+
+      &:last-of-type{
+        margin-bottom: 0;
+      }
+    }
 
     label{
       display: inline-block;
@@ -101,11 +133,20 @@
   justify-content: space-between;
   margin-top: 40px;
 
+  @include max-w($screen-md){
+    flex-direction: column;
+    align-items: center;
+  }
+
   label{
     display: inline-block;
     max-width:766px;
     width: 100%;
     margin-right: 5px;
+
+    @include max-w($screen-md){
+      margin-bottom: 10px;
+    }
   }
 
   .input{
@@ -183,6 +224,12 @@
   font-weight: 700;
   text-align: center;
   padding-top: 27px;
+
+  @include max-w($screen-md) {
+    left: -18px;
+    top: -20px;
+    background: none;
+  }
 }
 
 .form-row{
@@ -190,6 +237,10 @@
   align-items: stretch;
   margin-right: -15px;
   margin-left: -15px;
+
+  @include max-w($screen-md){
+    flex-wrap: wrap;
+  }
 }
 
 .col-wr-6{
@@ -197,6 +248,11 @@
   width: 50%;
   padding-left: 15px;
   padding-right: 15px;
+
+  @include max-w($screen-md){
+    width: 100%;
+  }
+
 }
 
 
@@ -274,6 +330,10 @@
     background-image: url('../images/arrow-down.png');
     background-repeat: no-repeat;
     background-position: center;
+
+    @include max-w($screen-sm){
+      right: -10px;
+    }
   }
 }
 
@@ -295,12 +355,24 @@
   padding: 20px 30px;
   //padding-bottom: 35px;
 
+  @include max-w($screen-md){
+    position: static;
+  }
+
+  @include max-w($screen-sm){
+    padding: 20px 0;
+  }
+
   &--open {
     display: block;
   }
 
   &__inner {
     display: flex;
+
+    @include max-w($screen-md){
+      flex-direction: column;
+    }
   }
 
   &__picker {

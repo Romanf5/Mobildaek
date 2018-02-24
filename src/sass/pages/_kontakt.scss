@@ -1,13 +1,26 @@
 .contact-container {
+  position: relative;
   max-width: 1200px;
   padding-left: 15px;
   padding-right: 15px;
   margin: 0 auto;
+  z-index: 100;
+  line-height: 1.2;
+
+  @include max-w($screen-md){
+    font-size: 35px;
+    z-index: 99;
+  }
+
 
   .title {
     font-size: 40px;
     color: $brand-color;
     margin-bottom: 18px;
+
+    @include max-w($screen-md){
+      font-size: 35px;
+    }
   }
 
   .description {
@@ -15,6 +28,10 @@
     color: $dark-color;
     max-width: 821px;
     margin-bottom: 65px;
+
+    @include max-w($screen-md){
+      margin-bottom: 35px;
+    }
   }
 }
 
@@ -23,11 +40,21 @@
   display: flex;
   flex-direction: row;
 
+  @include max-w($screen-md){
+    flex-wrap: wrap;
+  }
+
   label {
     display: block;
     width: 50%;
     padding-left: 15px;
     padding-right: 15px;
+
+    @include max-w($screen-md){
+      width: 100%;
+      padding: 0;
+    }
+
 
     &:first-of-type {
       padding-left: 0;
@@ -48,5 +75,9 @@
   button {
     margin-top: 50px;
     cursor: pointer;
+
+    @include max-w($screen-sm){
+      margin-top: 30px;
+    }
   }
 }

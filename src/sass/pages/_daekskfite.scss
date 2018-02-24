@@ -3,10 +3,34 @@
   .description{
     margin-bottom: 150px;
     max-width: 490px;
+
+    @include max-w($screen-1440){
+      margin-bottom: 90px;
+    }
+
+    @include max-w($screen-md){
+      margin-bottom: 50px;
+    }
   }
 
   .pos-img-wrp{
     bottom: -55px;
     max-width: 460px;
+
+    @include max-w($screen-xl){
+      max-width: 380px;
+    }
+
+    @include max-w($screen-lg){
+      max-width: 280px;
+    }
+
+    @include max-w($screen-md){
+      max-width: 200px;
+    }
+
+    @include max-w($screen-sm){
+      display: none;
+    }
   }
 }

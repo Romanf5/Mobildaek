@@ -9,6 +9,10 @@
 
   &--indent-sm{
     margin-top: 100px;
+
+    @include max-w($screen-xl){
+      margin-top: 50px;
+    }
   }
 
   &--form{
@@ -109,7 +113,7 @@
     text-align: center;
 
     .icon-arrow-right{
-      right: 14px;
+      right: 23px;
     }
   }
 
@@ -155,6 +159,13 @@
     width: 274px;
     padding: 18px 0;
     font-family: $menu-font;
+    font-weight: 700;
+    position: relative;
+    z-index: 50;
+
+    @include max-w($screen-xl) {
+      width: 250px;
+    }
   }
 
   &--single{
@@ -171,6 +182,10 @@
     padding: 13px 0;
     width: 212px;
 
+    @include max-w($screen-md){
+      margin-top: 20px;
+    }
+
     >.icon{
       right: 10px;
     }
@@ -184,8 +199,17 @@
     font-family: $menu-font;
     font-weight: 700;
 
+    @include max-w($screen-sm){
+      width: 212px;
+      font-size: 16px;
+    }
+
     >.icon{
       right:10px;
+
+      @include max-w($screen-sm){
+        display: none;
+      }
     }
   }
 
@@ -193,10 +217,26 @@
     width: 200px;
     font-weight: 700;
     padding: 18px 0;
+
+    @include max-w($screen-md){
+      width: 135px;
+
+      >.icon{
+        display: none;
+      }
+    }
+
+    @include max-w($screen-sm){
+      width: 100px;
+    }
   }
 
   &--indent{
     margin-right: 45px;
+
+    @include max-w($screen-sm) {
+      margin-right: 5px;
+    }
   }
 
   &--invite{
@@ -204,6 +244,14 @@
     padding: 17px 0;
     font-size: 22px;
     font-weight: 700;
+
+    @include max-w($screen-sm){
+      width: 100%;
+
+      .icon{
+        display: none;
+      }
+    }
 
     .icon{
       right: 10px;
@@ -215,6 +263,16 @@
     font-family: $menu-font;
     font-size: 24px;
     font-weight: 700;
+  }
+
+  &--filter-mobile-btn{
+    margin-top: 50px;
+    width: 200px;
+    display: none;
+
+    @include max-w($screen-lg){
+      display: inline-block;
+    }
   }
 }
 
@@ -270,4 +328,14 @@
   &:hover{
     color: $dark-color;
   }
+}
+
+.filter-mobile-btn{
+  text-align: center;
+  color: white;
+  background-color: transparent;
+  border:none;
+  outline: none;
+  margin-right: 5px;
+  display: none;
 }

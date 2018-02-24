@@ -14,6 +14,17 @@
     color: $brand-color;
     line-height: 47.55px;
     margin-bottom: 20px;
+
+    @include max-w($screen-xxl){
+      font-size: 35px;
+      line-height: 40px;
+    }
+
+    @include max-w($screen-xxl){
+      font-size: 30px;
+      line-height: 35px;
+    }
+
   }
 
   .description,
@@ -27,6 +38,10 @@
   .signature-block {
     position: relative;
 
+    @include max-w($screen-xl){
+      padding-left: 50px;
+    }
+
     &:before {
       content: '';
       display: block;
@@ -36,6 +51,10 @@
       position: absolute;
       bottom: 15%;
       left: -6%;
+
+      @include max-w($screen-xl){
+        left: 0;
+      }
     }
   }
 
@@ -50,5 +69,17 @@
     bottom: -28%;
     right: 0;
     left: auto;
+
+    @include max-w($screen-xl){
+      max-width: 550px;
+    }
+
+    @include max-w($screen-lg){
+      max-width: 380px;
+    }
+
+    @include max-w($screen-sm) {
+      display: none;
+    }
   }
 }

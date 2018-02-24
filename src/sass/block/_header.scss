@@ -44,6 +44,10 @@
   z-index: 10;
   left: 5px;
   top: 5px;
+  font-size: 12px;
+  font-weight: 700;
+  vertical-align: middle;
+  padding-top: 4px;
 
   @include max-w($screen-lg){
     left: 7px;

@@ -28,6 +28,7 @@
 .contact-info{
   @include clearlist;
   margin-bottom: 52px;
+  text-align: center;
 
   @include max-w($screen-lg){
     margin-bottom: 30px;

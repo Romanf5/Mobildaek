@@ -2,9 +2,30 @@
 
    .description{
     max-width: 493px;
+
+     @include max-w($screen-lg){
+       position: relative;
+       z-index: 99;
+     }
   }
 
   .pos-img-wrp{
     right: -75px;
+
+    @include max-w($screen-xl){
+      max-width: 580px;
+    }
+
+    @include max-w($screen-xl){
+      max-width: 450px;
+    }
+
+    @include max-w($screen-md){
+      max-width: 310px;
+    }
+
+    @include max-w($screen-sm){
+      display: none;
+    }
   }
 }

@@ -7,6 +7,16 @@
   padding-right: 15px;
   overflow: hidden;
 
+  @include max-w($screen-md){
+    padding-top: 100px;
+    padding-bottom: 50px;
+  }
+
+  @include max-w($screen-sm){
+    padding-left: 0;
+    padding-right: 0;
+  }
+
   &:before{
     position: absolute;
     left: 0;
@@ -61,6 +71,21 @@
     font-weight: 700;
     line-height: 64.55px;
     margin-bottom: 15px;
+
+    @include max-w($screen-xl){
+      font-size: 35px;
+      line-height: 40px;
+    }
+
+    @include max-w($screen-md) {
+      font-size: 30px;
+      line-height: 35px;
+    }
+
+    @include max-w($screen-sm){
+      font-size: 25px;
+      line-height: 30px;
+    }
   }
 
   &__title-2{
@@ -69,6 +94,12 @@
     font-family: $title-font;
     line-height: 64.55px;
     letter-spacing: 0.78px;
+
+    @include max-w($screen-sm){
+      font-size: 25px;
+      line-height: 25px;
+      margin-bottom: 10px;
+    }
   }
 
   &__description{
@@ -92,6 +123,10 @@
     font-weight: 700;
     margin-bottom: 5px;
     margin-top: 5px;
+
+    @include max-w($screen-sm){
+      font-size: 20px;
+    }
   }
 
   &__char{
@@ -123,6 +158,11 @@
     color: $dark-color;
     margin-top: 10px;
     margin-bottom: 30px;
+
+    @include max-w($screen-md) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
   }
 }
 

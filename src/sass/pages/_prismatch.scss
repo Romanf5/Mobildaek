@@ -6,6 +6,10 @@
   .title {
     font-size: 40px;
     color: $brand-color;
+
+    @include max-w($screen-sm){
+      font-size: 30px;
+    }
   }
 
   .description {
@@ -20,6 +24,15 @@
   justify-content: space-between;
   align-items: stretch;
   margin: 105px -20px 0;
+
+  @include max-w($screen-xl){
+    margin-top: 80px;
+  }
+
+  @include max-w($screen-lg){
+    margin-top: 50px;
+    flex-wrap: wrap;
+  }
 }
 
 .prismatch-item {
@@ -29,6 +42,15 @@
   position: relative;
   width: 25%;
   padding: 54px 20px 39px;
+
+  @include max-w($screen-lg){
+    width: 50%;
+    margin-bottom: 30px;
+  }
+
+  @include max-w($screen-sm){
+    width: 100%;
+  }
 
   &:after {
     content: '';

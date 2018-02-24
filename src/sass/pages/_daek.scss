@@ -1,6 +1,11 @@
 .products-section{
   padding-bottom: 117px;
 
+  @include max-w($screen-xl){
+    padding-bottom: 50px;
+    padding-top: 50px;
+  }
+
   &:after{
     left: 20px;
     width: 660px;
@@ -12,6 +17,15 @@
     max-width: 1694px;
     padding: 0 15px;
     margin: 0 auto;
+    overflow: hidden;
+
+    @include max-w($screen-1440){
+      max-width: 1200px;
+    }
+
+    @include max-w($screen-xl){
+      max-width: 900px;
+    }
   }
 }
 
@@ -20,6 +34,11 @@
   flex-direction: row;
   justify-content: space-between;
   margin: 0 -63px 60px;
+
+  @include max-w($screen-1440){
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
 }
 
 .product{
@@ -27,6 +46,21 @@
   border-right: 1px solid #adada9;
   padding-right: 63px;
   padding-left: 63px;
+
+  @include max-w($screen-1440){
+    width: 50%;
+    margin-bottom: 20px;
+  }
+
+  @include max-w($screen-md){
+    width: 80%;
+    margin: 0 auto 30px;
+    border: none;
+  }
+
+  @include max-w($screen-sm){
+    width: 100%;
+  }
 
   &:last-of-type{
     border: none;
@@ -53,6 +87,15 @@
     &--single{
       max-width: 100%;
       font-size: 50px;
+
+      @include max-w($screen-xl){
+        font-size: 38px;
+      }
+
+      @include max-w($screen-md) {
+        font-size: 30px;
+        margin-bottom: 0;
+      }
     }
   }
 
@@ -90,6 +133,10 @@
     padding: 0;
     width: 50%;
     border: none;
+
+    @include max-w($screen-md){
+      width: 100%;
+    }
   }
 }
 
@@ -113,7 +160,7 @@
     margin-top: 15px;
 
     >li{
-      margin-bottom: 10px;
+      margin-bottom: 3px;
       >.icon{
         margin-right: 10px;
         vertical-align: middle;
@@ -160,7 +207,7 @@
     >span{
       display: block;
       font-family: $menu-font;
-      font-size: 44px;
+      font-size: 30px;
       color: $brand-color;
       letter-spacing: -1.51px;
       font-weight: 700;
@@ -178,6 +225,14 @@
         font-size: 59px;
         font-weight: 700;
         line-height: 82.73px;
+
+        @include max-w($screen-xl){
+          font-size: 48px;
+        }
+
+        @include max-w($screen-md) {
+          font-size: 40px;
+        }
       }
     }
   }
