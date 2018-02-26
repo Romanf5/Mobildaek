@@ -324,6 +324,11 @@
         background: url('../images/big-m.png') no-repeat right top;
         background-size: 50%;
       }
+
+      @include max-w($screen-sm){
+        background: url('../images/banner-man.png') no-repeat right bottom;
+        background-size: 70%;
+      }
     }
 
     .banner-container {
@@ -356,10 +361,19 @@
       .title,
       .description {
         color: $body-bg;
+
+        @include max-w($screen-lg){
+          margin-bottom: 0;
+        }
+
         > p:last-of-type {
           font-size: 22px;
           font-weight: 700;
           margin-top: 25px;
+
+          @include max-w($screen-lg){
+            margin-bottom: 0;
+          }
         }
       }
     }

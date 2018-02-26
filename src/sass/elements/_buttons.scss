@@ -331,11 +331,18 @@
 }
 
 .filter-mobile-btn{
+  width: 100%;
+  background-color: $brand-color;
   text-align: center;
   color: white;
-  background-color: transparent;
   border:none;
   outline: none;
   margin-right: 5px;
   display: none;
+  font-family: $title-font;
+  text-transform: uppercase;
+  font-weight: 700;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  margin-bottom: 20px;
 }

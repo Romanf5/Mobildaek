@@ -56,13 +56,13 @@ $(document).ready(function () {
       } else {
         $(this).addClass('active-burger');
         menu.addClass('active-menu');
-        $('body').css('overflow','hidden')
+        $('body').css('overflow', 'hidden')
       }
     });
 
     $(window).on('load resize', function () {
       var windowWidth = $(this).width();
-      if(windowWidth > 992){
+      if (windowWidth > 992) {
         btnHamburger.removeClass('active-burger');
         menu.removeClass('active-menu');
         $('body').removeAttr('style');
@@ -70,15 +70,15 @@ $(document).ready(function () {
         filter.removeClass('show-filter');
       }
 
-      if(body.hasClass('has-filter') && windowWidth<=992){
-        filterBtn.css('display','block')
+      if (body.hasClass('has-filter') && windowWidth <= 992) {
+        filterBtn.css('display', 'block')
       }
     });
 
     filterBtn.on('click', function () {
-      if(filter.hasClass('show-filter')){
+      if (filter.hasClass('show-filter')) {
         filter.removeClass('show-filter');
-      }else {
+      } else {
         filter.addClass('show-filter');
       }
     });
@@ -91,19 +91,19 @@ $(document).ready(function () {
       cardPopup.removeClass('show-card');
     });
 
-    delBtn.on('click',function () {
+    delBtn.on('click', function () {
       delBlock.fadeOut();
     });
 
-    btnYes.on('click' ,function (event) {
-      if(!firstStep.hasClass('show-step')){
-      event.preventDefault();
-      firstStep.addClass('show-step');
+    btnYes.on('click', function (event) {
+      if (!firstStep.hasClass('show-step')) {
+        event.preventDefault();
+        firstStep.addClass('show-step');
       }
     });
 
-    btnNo.on('click' ,function (event) {
-      if(!firstStep.hasClass('show-step')) {
+    btnNo.on('click', function (event) {
+      if (!firstStep.hasClass('show-step')) {
         event.preventDefault();
         firstStep.addClass('show-step');
         radioBtnFirstStep.css('display', 'none');
@@ -202,8 +202,21 @@ $(document).ready(function () {
     }, $.datepicker.regional["da"]);
 
     // open datepicker
-    $('.js-open-date-modal').on('click', function () {
+    $('.js-open-date-modal').on('click', function (event) {
       $datemodal.toggleClass('date-modal--open');
+      event.stopPropagation();
+    });
+
+    $('body').on('click', function (event) {
+      if (!$(event.target).is('.date-modal, .date-modal *') && $datemodal.hasClass('date-modal--open')){
+        $datemodal.removeClass('date-modal--open');
+        var currentDate = $datepicker.datepicker("getDate");
+        var dateFormated = moment(currentDate).format("dddd [d.] Do MMMM YYYY");
+        var dateTime = $bookingForm.find('.date-modal__time input:checked').val();
+        var visitedDate = dateFormated + ' - kl. ' + dateTime;
+        $dateInput.val(visitedDate);
+      }
+
     });
 
     // momentjs
