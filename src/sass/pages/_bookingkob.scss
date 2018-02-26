@@ -226,9 +226,20 @@
   padding-top: 27px;
 
   @include max-w($screen-md) {
-    left: -18px;
-    top: -20px;
-    background: none;
+    background: url('../images/step-marker.png') no-repeat center/cover;
+    background-size: 70%;
+    top: 0;
+    left: 5px;
+    padding-top: 32px;
+    font-size: 15px;
+  }
+
+  @include max-w($screen-sm) {
+    background-size: 55%;
+    left: -26px;
+    top: -30px;
+    font-size: 12px;
+    padding-top: 35px;
   }
 }
 
@@ -307,7 +318,8 @@
   display: none;
 }
 
-.step-2-form{
+.step-2-form,
+.step-1-form{
   display: none;
 }
 

@@ -148,8 +148,24 @@ section {
   }
 }
 
-.poptrox-popup{
-  min-width: 80% !important;
+
+.worn{
+  color:#b83062;
+  font-size: 16px;
+  font-weight: 700;
+  font-family: $menu-font;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 15px;
+
+  >a{
+    text-decoration: underline;
+    color:#b83062;
+  }
+}
+
+.js-del-btn{
+  cursor: pointer;
 }
 
 .header-nav.active-menu{

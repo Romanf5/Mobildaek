@@ -123,38 +123,41 @@
                 Hvilken bil skal have dækskifte?
               </div>
 
-              <label for="register-number"></label>
-              <input type="text" name="register-number" class="input" id="register-number"
-                     placeholder="Intast dit registreringsnummer">
 
-              <label for="state"></label>
-              <select name="state" id="state" class="select-booking">
-                <option disabled selected>Dækstatus</option>
-                <option value="lorem 1">lorem 1</option>
-                <option value="lorem 2">lorem 2</option>
-                <option value="lorem 3">lorem 3</option>
-                <option value="lorem 4">lorem 4</option>
-              </select>
+                <label for="register-number"></label>
+                <input type="text" name="register-number" class="input" id="register-number"
+                       placeholder="Intast dit registreringsnummer">
 
-              <div class="js-form-fields-output">
+                <label for="state"></label>
+                <select name="state" id="state" class="select-booking">
+                  <option disabled selected>Dækstatus</option>
+                  <option value="lorem 1">lorem 1</option>
+                  <option value="lorem 2">lorem 2</option>
+                  <option value="lorem 3">lorem 3</option>
+                  <option value="lorem 4">lorem 4</option>
+                </select>
 
-                <div class="booking-form__title-2 booking-form__title-2--mt-25">
-                  Hvilken bil skal have dækskifte?
-                </div>
+              <div class="worn">Mobildæk har ingen dæk registreret på dette registeringsnummer. <a href="#">Kontakt Mobildæk for hjælp.</a></div>
 
-                <label for="delivery-address"></label>
-                <input type="text" name="delivery-address-1" class="input" id="delivery-address"
-                       placeholder="Address">
-                <div class="form-row">
-                  <label class="col-wr-6">
-                    <input type="text" name="delivery-postcode-1" class="input" id="delivery-postcode"
-                           placeholder="Postnummer">
-                  </label>
-                  <label class="col-wr-6">
-                    <input type="text" name="delivery-by-1" class="input" id="delivery-by"
-                           placeholder="By">
-                  </label>
-                </div>
+              <div class="js-form-fields-output"></div>
+
+
+              <div class="booking-form__title-2 booking-form__title-2--mt-25">
+                Hvilken bil skal have dækskifte?
+              </div>
+
+              <label for="delivery-address"></label>
+              <input type="text" name="delivery-address-1" class="input" id="delivery-address"
+                     placeholder="Address">
+              <div class="form-row">
+                <label class="col-wr-6">
+                  <input type="text" name="delivery-postcode-1" class="input" id="delivery-postcode"
+                         placeholder="Postnummer">
+                </label>
+                <label class="col-wr-6">
+                  <input type="text" name="delivery-by-1" class="input" id="delivery-by"
+                         placeholder="By">
+                </label>
               </div>
 
 
@@ -270,7 +273,8 @@
 
               <div class="form-datepicker">
                 <div class="js-open-date-modal form-datepicker__open-modal"></div>
-                <input type="text" name="date" class="input form-datepicker__input" id="date-input" placeholder="Vælg dato og tid" disabled>
+                <input type="text" name="date" class="input form-datepicker__input" id="date-input"
+                       placeholder="Vælg dato og tid" disabled>
                 <div class="date-modal">
                   <div class="date-modal__inner">
                     <div class="date-modal__picker">
@@ -281,11 +285,13 @@
                         Ondag d. 10 februar
                       </div>
                       <div class="date-modal__time-wrap">
-                        <input type="radio" name="time" id="time-1" class="js-custom-radio radio radio--small" checked="checked" value="08.00-12.00">
+                        <input type="radio" name="time" id="time-1" class="js-custom-radio radio radio--small"
+                               checked="checked" value="08.00-12.00">
                         <label for="time-1">kl. 08.00-12.00</label>
                       </div>
                       <div class="date-modal__time-wrap">
-                        <input type="radio" name="time" id="time-2" class="js-custom-radio radio radio--small" value="12.00-16.00">
+                        <input type="radio" name="time" id="time-2" class="js-custom-radio radio radio--small"
+                               value="12.00-16.00">
                         <label for="time-2">kl. 12.00-16.00</label>
                       </div>
                       <div class="date-modal__time-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit</div>

@@ -28,54 +28,57 @@
             </div>
 
             <div class="btn-wrp btn-wrp--form">
-              <a href="#" class="btn btn--form-sm btn--indent">Nej <i class="icon icon-arrow-right"></i></a>
-              <a href="#" class="btn btn--form-sm">Ja <i class="icon icon-arrow-right"></i></a>
+              <a href="#" class="btn btn--form-sm btn--indent js-no">Nej <i class="icon icon-arrow-right"></i></a>
+              <a href="#" class="btn btn--form-sm js-yes">Ja <i class="icon icon-arrow-right"></i></a>
             </div>
           </div>
         </div>
 
-        <div class="ancillary-content-wrp ancillary-content-wrp--booking ancillary-content-wrp--margin-indent">
-          <div class="booking-form__content">
-            <div class="step">1/2</div>
-            <div class="booking-form__title">
-              ???????????
-            </div>
-
-            <div class="booking-form__title-2">
-              Hvad skal der ske med dine afmonterede dæk?
-            </div>
-
-            <div class="radio-buttons">
-
-              <div class="radio-buttons__item">
-                <input class="radio" type="radio" name="delive" value="1" id="delover_1">
-                <div>
-                  <label for="delover_1">Jeg vil selv beholde dem</label>
-                  <div class="subtitle">Mobildæk stiller dem ved din bil</div>
-                </div>
+        <div class="step-1-form">
+          <div class="ancillary-content-wrp ancillary-content-wrp--booking ancillary-content-wrp--margin-indent">
+            <div class="booking-form__content">
+              <div class="step">1/2</div>
+              <div class="booking-form__title">
+                ???????????
               </div>
 
-              <div class="radio-buttons__item">
-                <input class="radio" type="radio" name="delive" value="2" id="delover_2">
-                <div>
-                  <label for="delover_2">Mobildæk må godt afskaffer (49,-)</label>
-                  <div class="subtitle">Mobildæk tager dem med og betaler miljøafgiften</div>
+              <div class="booking-form__title-2">
+                Hvad skal der ske med dine afmonterede dæk?
+              </div>
+
+              <div class="radio-buttons">
+
+                <div class="radio-buttons__item">
+                  <input class="radio" type="radio" name="delive" value="1" id="delover_1">
+                  <div>
+                    <label for="delover_1">Jeg vil selv beholde dem</label>
+                    <div class="subtitle">Mobildæk stiller dem ved din bil</div>
+                  </div>
                 </div>
+
+                <div class="radio-buttons__item">
+                  <input class="radio" type="radio" name="delive" value="2" id="delover_2">
+                  <div>
+                    <label for="delover_2">Mobildæk må godt afskaffer (49,-)</label>
+                    <div class="subtitle">Mobildæk tager dem med og betaler miljøafgiften</div>
+                  </div>
+                </div>
+
+              </div>
+
+              <div class="invite">
+                <label>
+                  <input type="text" name="invite" class="input" id="input" placeholder="Instast voucher her">
+                </label>
+                <button type="button" class="btn btn--invite">Indløs <i class="icon icon-arrow-right"></i></button>
+              </div>
+
+              <div class="btn-wrp btn-wrp--booing">
+                <button type="button" class="btn btn--form-sm js-nextStrep">Næste <i class="icon icon-arrow-right"></i>
+                </button>
               </div>
 
             </div>
-
-            <div class="invite">
-              <label>
-                <input type="text" name="invite" class="input" id="input" placeholder="Instast voucher her">
-              </label>
-              <button type="button" class="btn btn--invite">Indløs <i class="icon icon-arrow-right"></i></button>
-            </div>
-
-            <div class="btn-wrp btn-wrp--booing">
-              <button type="button" class="btn btn--form-sm js-nextStrep">Næste <i class="icon icon-arrow-right"></i></button>
-            </div>
-
           </div>
         </div>
 
@@ -208,7 +211,8 @@
 
               <div class="form-datepicker">
                 <div class="js-open-date-modal form-datepicker__open-modal"></div>
-                <input type="text" name="date" class="input form-datepicker__input" id="date-input" placeholder="Vælg dato og tid" disabled>
+                <input type="text" name="date" class="input form-datepicker__input" id="date-input"
+                       placeholder="Vælg dato og tid" disabled>
                 <div class="date-modal">
                   <div class="date-modal__inner">
                     <div class="date-modal__picker">
@@ -219,11 +223,13 @@
                         Ondag d. 10 februar
                       </div>
                       <div class="date-modal__time-wrap">
-                        <input type="radio" name="time" id="time-1" class="js-custom-radio radio radio--small" checked="checked" value="08.00-12.00">
+                        <input type="radio" name="time" id="time-1" class="js-custom-radio radio radio--small"
+                               checked="checked" value="08.00-12.00">
                         <label for="time-1">kl. 08.00-12.00</label>
                       </div>
                       <div class="date-modal__time-wrap">
-                        <input type="radio" name="time" id="time-2" class="js-custom-radio radio radio--small" value="12.00-16.00">
+                        <input type="radio" name="time" id="time-2" class="js-custom-radio radio radio--small"
+                               value="12.00-16.00">
                         <label for="time-2">kl. 12.00-16.00</label>
                       </div>
                       <div class="date-modal__time-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit</div>

@@ -27,15 +27,23 @@ $(document).ready(function () {
   var filterBtn = $('.filter-mobile-btn');
   var filter = $('.filter-wrp');
   var aplayFilter = $('.js-filter-btn');
+  var delBtn = $('.js-del-btn');
+  var delBlock = $('.js-del-block');
+  var btnYes = $('.js-yes');
+  var btnNo = $('.js-no');
+  var firstStep = $('.step-1-form');
+  var radioBtnFirstStep = $('.radio-buttons');
 
   initial();
 
 
   //Initial function
   function initial() {
+
     tabControls.on('click', tabHandler);
     activeMenuHandler(itemMenu);
     customSelect();
+
     baskBtn.on('click', function () {
       cardPopup.addClass('show-card');
     });
@@ -83,12 +91,29 @@ $(document).ready(function () {
       cardPopup.removeClass('show-card');
     });
 
+    delBtn.on('click',function () {
+      delBlock.fadeOut();
+    });
+
+    btnYes.on('click' ,function (event) {
+      if(!firstStep.hasClass('show-step')){
+      event.preventDefault();
+      firstStep.addClass('show-step');
+      }
+    });
+
+    btnNo.on('click' ,function (event) {
+      if(!firstStep.hasClass('show-step')) {
+        event.preventDefault();
+        firstStep.addClass('show-step');
+        radioBtnFirstStep.css('display', 'none');
+      }
+    });
+
     //LightBox Video
     playBtn.poptrox({
       overlayColor: '#002d4e',
       overlayOpacity: 0.77,
-      popupWidth: 800,
-      popupHeight: 400
     });
 
     //Second Address group form
