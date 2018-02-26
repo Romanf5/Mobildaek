@@ -84,26 +84,26 @@
     font-size: 16px;
     margin: 0 auto;
     text-align: center;
-    min-height: 131px;
-    background: url('../images/1.png') no-repeat 45%;
+    min-height: 165px;
+    background: url('../images/num1.png') no-repeat 45%;
 
   }
 
   &:nth-of-type(2){
     .content{
-      background: url('../images/2.png') no-repeat 45%;
+      background: url('../images/num2.png') no-repeat 45%;
     }
   }
 
   &:nth-of-type(3){
     .content{
-      background: url('../images/3.png') no-repeat 45%;
+      background: url('../images/num3.png') no-repeat 45%;
     }
   }
 
   &:nth-of-type(4){
     .content{
-      background: url('../images/4.png') no-repeat 45%;
+      background: url('../images/num4.png') no-repeat 45%;
     }
   }
 }

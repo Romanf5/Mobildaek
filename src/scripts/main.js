@@ -33,6 +33,7 @@ $(document).ready(function () {
   var btnNo = $('.js-no');
   var firstStep = $('.step-1-form');
   var radioBtnFirstStep = $('.radio-buttons');
+  var helperEvent = $('.js-event-helper>div');
 
   initial();
 
@@ -207,8 +208,12 @@ $(document).ready(function () {
       event.stopPropagation();
     });
 
+    helperEvent.on('click',function () {
+      $datemodal.addClass('date-modal--open');
+    });
+
     $('body').on('click', function (event) {
-      if (!$(event.target).is('.date-modal, .date-modal *') && $datemodal.hasClass('date-modal--open')){
+      if (!$(event.target).is('.date-modal, .date-modal *') && !$(event.target).is('.js-event-helper, .js-event-helper *') && $datemodal.hasClass('date-modal--open')){
         $datemodal.removeClass('date-modal--open');
         var currentDate = $datepicker.datepicker("getDate");
         var dateFormated = moment(currentDate).format("dddd [d.] Do MMMM YYYY");
