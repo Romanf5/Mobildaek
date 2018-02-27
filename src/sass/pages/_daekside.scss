@@ -115,6 +115,10 @@
     font-weight: 500;
     max-width: 770px;
     line-height: 17.06px;
+
+    @include max-w($screen-1440){
+      max-width: 720px;
+    }
   }
 
   &__cahr{
