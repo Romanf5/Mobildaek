@@ -27,6 +27,18 @@
 }
 
 // font-family: 'Heebo';
+// font-weight: 700;
+@font-face {
+  font-family: 'Heebo';
+  font-weight: 700;
+  src:  local('Heebo'), local('Heebo');
+  src:  url('../fonts/Heebo-Bold.eot');
+  src:  url('../fonts/Heebo-Bold.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/Heebo-Bold.woff') format('woff'),
+  url('../fonts/Heebo-Bold.ttf') format('truetype');
+}
+
+// font-family: 'Heebo';
 // font-weight: 500;
 @font-face {
   font-family: 'Heebo';
@@ -74,7 +86,7 @@ h1 {
 }
 
 h2 {
-	font-size: 36px;
+	font-size: 46px;
 }
 
 h3 {

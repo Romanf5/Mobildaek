@@ -42,6 +42,7 @@
   font-size: 24px;
   color: #fff;
   transition: 0.5s;
+  font-weight: 700;
 
   @include max-w($screen-1440){
     width: 290px;

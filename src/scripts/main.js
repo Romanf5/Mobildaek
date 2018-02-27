@@ -34,6 +34,8 @@ $(document).ready(function () {
   var firstStep = $('.step-1-form');
   var radioBtnFirstStep = $('.radio-buttons');
   var helperEvent = $('.js-event-helper>div');
+  var step1 = $('#step_1');
+  var step2 = $('#step_2');
 
   initial();
 
@@ -97,9 +99,11 @@ $(document).ready(function () {
     });
 
     btnYes.on('click', function (event) {
+      var offset = 1000;
       if (!firstStep.hasClass('show-step')) {
         event.preventDefault();
         firstStep.addClass('show-step');
+        offsetScroll(step1);
       }
     });
 
@@ -108,6 +112,7 @@ $(document).ready(function () {
         event.preventDefault();
         firstStep.addClass('show-step');
         radioBtnFirstStep.css('display', 'none');
+        offsetScroll(step1);
       }
     });
 
@@ -183,9 +188,9 @@ $(document).ready(function () {
 
   //Show Step
   function showStep() {
-    console.log('work');
     var stepTwo = $('.step-2-form');
     stepTwo.addClass('show-step');
+    offsetScroll(step2)
   }
 
   // booking form datepicker
@@ -245,6 +250,8 @@ $(document).ready(function () {
   var fieldsCounter = 1;
   $('.added-btn').on('click', function (e) {
     createFormFields();
+    $('.select-booking').styler();
+
   });
 
   function createFormFields() {
@@ -270,5 +277,11 @@ $(document).ready(function () {
     //   '</div>';
 
     $('.js-form-fields-output').append($(formTmpl));
+  }
+
+  function offsetScroll(step) {
+    $('html, body').animate({
+      scrollTop: step.offset().top
+    }, 2000);
   }
 });

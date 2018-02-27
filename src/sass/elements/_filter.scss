@@ -276,6 +276,10 @@
   right: -7px;
   bottom: 0;
 
+  @include max-w($screen-xxl){
+    right: 6px;
+  }
+
   @include max-w($screen-xl) {
     position: relative;
     z-index: 99;
