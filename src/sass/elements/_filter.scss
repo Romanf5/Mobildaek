@@ -1,7 +1,7 @@
 .filter-wrp {
   position: absolute;
   left: 50%;
-  bottom: -90px;
+  bottom: -110px;
   transform: translateX(-50%);
   max-width: 1664px;
   padding-left: 15px;
@@ -14,7 +14,7 @@
   z-index: 10;
 
   @include max-w($screen-1440){
-    bottom: -75px;
+    bottom: -90px;
   }
 
   @include max-w($screen-lg) {

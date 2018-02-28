@@ -32,10 +32,11 @@ $(document).ready(function () {
   var btnYes = $('.js-yes');
   var btnNo = $('.js-no');
   var firstStep = $('.step-1-form');
-  var radioBtnFirstStep = $('.radio-buttons');
   var helperEvent = $('.js-event-helper>div');
   var step1 = $('#step_1');
   var step2 = $('#step_2');
+  var variation1 = $('.js-variation-1');
+  var variation2 = $('.js-variation-2');
 
   initial();
 
@@ -99,10 +100,10 @@ $(document).ready(function () {
     });
 
     btnYes.on('click', function (event) {
-      var offset = 1000;
       if (!firstStep.hasClass('show-step')) {
         event.preventDefault();
         firstStep.addClass('show-step');
+        variation2.css('display','block');
         offsetScroll(step1);
       }
     });
@@ -111,7 +112,7 @@ $(document).ready(function () {
       if (!firstStep.hasClass('show-step')) {
         event.preventDefault();
         firstStep.addClass('show-step');
-        radioBtnFirstStep.css('display', 'none');
+        variation1.css('display','block');
         offsetScroll(step1);
       }
     });
@@ -282,6 +283,6 @@ $(document).ready(function () {
   function offsetScroll(step) {
     $('html, body').animate({
       scrollTop: step.offset().top
-    }, 2000);
+    }, 1000);
   }
 });

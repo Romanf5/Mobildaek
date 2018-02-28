@@ -313,7 +313,7 @@
       height: 465px;
       background: url('../images/bg-ns.png') no-repeat left top;
 
-      @include max-w($screen-lg){
+      @include max-w($screen-xl){
         display: none;
       }
     }
