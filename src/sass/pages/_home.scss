@@ -74,7 +74,7 @@
     height: 721px;
     background: url('../images/bg-marker-2.png') no-repeat 100%;
 
-    @include max-w($screen-lg) {
+    @include max-w($screen-1440) {
       display: none;
     }
   }
